@@ -7,8 +7,74 @@
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.5.5/css/pico.min.css">
 </head>
 <body>
-    {% include header.html %}
-    {% include main.html %}
-    {% include footer.html %}
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="learning-pygame-zero.html">Learning PyGame Zero</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Learning PyGame Zero</h1>
+        <section>
+            <h2>Introduction to PyGame Zero</h2>
+            <p>PyGame Zero is a beginner-friendly framework for creating games using Python. It is designed to be simple and easy to use, making it a great choice for those new to game development.</p>
+        </section>
+        <section>
+            <h2>Getting Started</h2>
+            <p>To get started with PyGame Zero, you need to install it using pip:</p>
+            <pre><code>pip install pgzero</code></pre>
+            <p>Once installed, you can create a simple game by creating a Python file and adding the following code:</p>
+            <pre><code>import pgzrun
+
+WIDTH = 800
+HEIGHT = 600
+
+def draw():
+    screen.clear()
+    screen.draw.text("Hello, PyGame Zero!", (WIDTH // 2, HEIGHT // 2))
+
+pgzrun.go()</code></pre>
+        </section>
+        <section>
+            <h2>Basic Concepts</h2>
+            <p>PyGame Zero games are built around a few basic concepts:</p>
+            <ul>
+                <li><strong>Actors:</strong> Actors are objects that can be drawn on the screen and can interact with each other.</li>
+                <li><strong>Screen:</strong> The screen object represents the game window and provides methods for drawing and updating the display.</li>
+                <li><strong>Events:</strong> Events are actions that occur during the game, such as key presses or mouse clicks.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Example: Moving an Actor</h2>
+            <p>Here is an example of how to create a simple game where an actor can be moved using the arrow keys:</p>
+            <pre><code>import pgzrun
+
+WIDTH = 800
+HEIGHT = 600
+
+player = Actor('player', (WIDTH // 2, HEIGHT // 2))
+
+def update():
+    if keyboard.left:
+        player.x -= 5
+    if keyboard.right:
+        player.x += 5
+    if keyboard.up:
+        player.y -= 5
+    if keyboard.down:
+        player.y += 5
+
+def draw():
+    screen.clear()
+    player.draw()
+
+pgzrun.go()</code></pre>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Heathmont Game Design. All rights reserved.</p>
+    </footer>
 </body>
 </html>

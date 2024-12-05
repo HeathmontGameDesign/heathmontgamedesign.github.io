@@ -11,8 +11,8 @@ title: "Heathmont Game Design"
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.5.5/css/pico.min.css">
 </head>
 <body>
-    {% render 'header.html' %}
-    {% render 'main.html' %}
-    {% render 'footer.html' %}
+    {% include 'header.html' %}
+    {% include 'main.html' %}
+    {% include 'footer.html' %}
 </body>
 </html>

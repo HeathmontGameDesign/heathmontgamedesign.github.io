@@ -31,10 +31,10 @@
     </style>
 </head>
 <body>
-    {% include header.html %}
+    {% render 'header.html' %}
     <main>
         {{ content }}
     </main>
-    {% include footer.html %}
+    {% render 'footer.html' %}
 </body>
 </html>

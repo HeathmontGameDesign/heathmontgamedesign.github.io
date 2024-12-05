@@ -21,5 +21,5 @@ When you load a PyGame Zero window, by default it opens quite a long way down th
 - Click on the Settings cog in the bottom right corner of the screen
 - Choose the 'Python Environment' tab
 - In the 'Environment Variables' box, type `SDL_VIDEO_WINDOW_POS=50,100` 
-    - *(you can change the numbers if you want the window to open in a different position)*
+  - *(you can change the numbers if you want the window to open in a different position)*
 - Click 'OK' and test your program to see if it opens in the right spot.

@@ -10,7 +10,7 @@ PyGame Zero uses a coordinate system to decide where to draw things on the scree
 
 ### Understanding Coordinates
 
-[Coordinate System](/lessons/images/coordinates.png)
+![Coordinate System](/assets/images/coordinates.png)
 
 The image above shows how points on a screen become coordinates. The top-left corner is (0, 0). The magenta dot is at (300, 0). The blue dot is at (50, 150).
 
@@ -54,4 +54,4 @@ You now have all the information you need to play around with drawing in PyGame 
 
 ## Challenge
 
-Create a new PyGame Zero program that draws a house. The house should have a roof, a door, and windows. Name your program `house.py`.
+Create a new PyGame Zero program that draws a house. The house should have a roof, a door, and windows. Name your program `1_house.py`.

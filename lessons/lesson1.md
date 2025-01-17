@@ -1,6 +1,4 @@
----
-title: "Lesson 1: Draw to Screen"
----
+# Lesson 1: Draw to Screen
 
 To start with PyGame Zero, you need to know how to work with the screen. The screen is where everything happens in your game. You can draw shapes, images, and text on the screen.
 

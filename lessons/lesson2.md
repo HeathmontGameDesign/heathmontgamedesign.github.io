@@ -49,7 +49,7 @@ def update():
         player.x = player.x + 2
 ```
 
-This code checks if the left or right arrow keys are pressed, and moves the player actor left or right accordingly. It changes the `x` position of the player actor by 2 pixels (down to go left, up to go right). 
+This code checks if the left or right arrow keys are pressed, and moves the player actor left or right accordingly. It changes the `x` position of the player actor by 2 pixels (down to go left, up to go right).
 
 ## Sample Code
 
@@ -72,5 +72,6 @@ Create a copy of your completed sample code and modify it so that:
 
 - Once the ghost actor reaches the right side of the screen, it reappears on the left side.
 - Include a second ghost actor that moves up and down. Have the second ghost go the other way when it reaches the top or bottom of the screen.
+- (If you succeed with the first two) Add a third ghost actor that moves randomly around the screen. *(Investigate the random module for help with this)*
 
 Name your program `2_ghost.py`

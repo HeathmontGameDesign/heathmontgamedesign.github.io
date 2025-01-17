@@ -18,7 +18,7 @@ To create an actor, we use the `Actor` class. Here is an example:
 player = Actor('player', (400, 300))
 ```
 
-`player` is the name of the variable that stores the actor. `'player'` is the name of the image file that represents the actor. `(400, 300)` is the starting position of the actor on the screen. This code goes at the start of the program.
+`player` is the name of the variable that stores the actor. `'player'` (in quotes) is the name of the image file that represents the actor. `(400, 300)` is the starting position of the actor on the screen. This code goes at the start of the program.
 
 ## Drawing an Actor
 

@@ -12,11 +12,13 @@ Run the installer and follow the instructions to install the Mu code editor on y
 
 ## Step 2: Setting the mode and environment variables
 
-Once you have installed the Mu code editor, you need to set the mode to PyGame Zero. This is done by clicking on the mode button in the top right corner of the Mu code editor and selecting PyGame Zero from the list of options. This is not actually required, but it provides extra help (like an easy link through to the images folder).
+Once you have installed the Mu code editor, you need to set the **mode** to `PyGame Zero`. This is done by clicking on the mode button in the top right corner of the Mu code editor and selecting `PyGame Zero` from the list of options. This is not actually required, but it provides extra help (like an easy link through to the images folder).
 
 ### Environment Variables
 
-When you load a PyGame Zero window, by default it opens quite a long way down the screen, which on small laptop screens can be quite annoying. We can fix this in the code each time, but it is easier to set the default variable inside Mu Code. To do so:
+When you load a PyGame Zero window, by default it opens quite a long way down the screen, which on small laptop screens can be quite annoying. There are a few ways to fix this but the easiest is to set the default variable inside Mu Code.
+
+To do so:
 
 - Click on the Settings cog in the bottom right corner of the screen
 - Choose the 'Python Environment' tab

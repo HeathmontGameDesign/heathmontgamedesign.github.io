@@ -1,4 +1,4 @@
-# Setting up your latptop for PyGame Zero
+# Setting up your laptop for PyGame Zero
 
 ## Step 1: Install the Mu Code Editor
 
@@ -8,7 +8,11 @@ The Mu code editor is a simple code editor that is designed for beginners. It is
 
 Choose the version that is appropriate for your operating system (Windows for most of you, Mac for some, Linux if you are that kind of fun).
 
+---
+
 Run the installer and follow the instructions to install the Mu code editor on your laptop.
+
+---
 
 ## Step 2: Setting the mode and environment variables
 

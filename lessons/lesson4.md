@@ -123,12 +123,13 @@ The other important part is the `clock.schedule_unique()` function. This functio
 
 ## Your Task
 
-- Complete the TODO comments in the sample code:
-  - You will need to use the `colliderect()` function to check for a collision between `heath` and `cross`. If you are not sure how to do this, look back at the collision detection code from the previous lesson.
-  - You will need to increase or decrease the `score` variable based on whether there is a collision or not with the mouse position.
-  - You will need to change the image of the `cross` Actor to a tick or a cross based on whether there is a collision or not.
-  - Add the score to the screen. You can use the `screen.draw.text()` function to do this. You will need to convert the `score` variable to a string using the `str()` function.
-  - Test your game by running it and clicking on `heath` as often as you can. Make sure the score increases when you click on `heath`, and decreases when you don't.
+Complete the TODO comments in the sample code:
+  
+- You will need to use the `colliderect()` function to check for a collision between `heath` and `cross`. If you are not sure how to do this, look back at the collision detection code from the previous lesson.
+- You will need to increase or decrease the `score` variable based on whether there is a collision or not with the mouse position.
+- You will need to change the image of the `cross` Actor to a tick or a cross based on whether there is a collision or not.
+- Add the score to the screen. You can use the `screen.draw.text()` function to do this. You will need to convert the `score` variable to a string using the `str()` function.
+- Test your game by running it and clicking on `heath` as often as you can. Make sure the score increases when you click on `heath`, and decreases when you don't.
 
 ## Challenge
 

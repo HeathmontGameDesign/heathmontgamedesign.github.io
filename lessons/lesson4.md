@@ -20,7 +20,9 @@ The function takes two arguments: the `pos` (position) of the mouse (a tuple of 
 
 ## Our Sample Code
 
-In the sample code, Heath is currently moving randomly across the screen. It looks a little bit crazy, but it will work for today's game. You need to click on Heath correctly, as often as you can. Lets take a look at what is happening at the moment.
+- Download the sample code here: [4 - Mouse Clicks](https://github.com/HeathmontGameDesign/LearningPGZ/blob/main/4_Mouse_Clicks/4_sample.py), [Images folder](https://github.com/HeathmontGameDesign/LearningPGZ/tree/main/4_Mouse_Clicks/images)
+
+In the sample code, Heath is currently moving randomly across the screen. It looks a little bit weird, but it will work fine for today's game. You need to click on Heath correctly, as often as you can. Lets take a look at what is happening at the moment.
 
 ```python
 import pgzrun
@@ -134,5 +136,5 @@ Complete the TODO comments in the sample code:
 ## Challenge
 
 - Add a timer to the game. The timer should start at 30 seconds and count down to 0. When the timer reaches 0, the game should end. You can use the `clock.schedule_interval()` function to run a function every second to update the timer. You will need to add a new global variable to store the timer value, and you will need to add code to draw the timer on the screen.
-- Add a game over screen that displays the final score when the timer reaches 0. You can use a new global variable to keep track of whether the game is over or not. When the timer reaches 0, set this variable to `True` and display the game over screen. You can use the `screen.draw.text()` function to display the final score on the game over screen.
+- Add a game over screen that displays the final score when the timer reaches 0. You can use a new global variable to keep track of whether the game is over or not. When the timer reaches 0, set this variable to `True` and display the game over screen. You can use the `screen.draw.text()` fnction to display the final score on the game over screen.
 - Add a restart button to the game over screen that allows the player to restart the game. You can use the `on_mouse_down()` function to check for a click on the restart button, and reset the game state if the button is clicked.

@@ -39,7 +39,7 @@ BGCOLOUR = (255, 200, 0)
 HEATH_SPEED = 20
 ```
 
-Not much relevant so far - but there is an important point here. HEATH_SPEED and BGCOLOUR are not built in to PyGame Zero, but we have written them in all caps. This is a convention to show that they are **constants** - values that we will not change during the game. Constants are often written in all caps to make them easy to spot in the code and they are especially useful when we need to use the same value in multiple places. *Any number that is used more than once in the code should be a constant.*
+Not much new so far - but there is one key difference here. HEATH_SPEED and BGCOLOUR are not built in to PyGame Zero, but we have written them in all caps. This is a convention to show that they are **constants** - values that we will not change during the game. Constants are often written in all caps to make them easy to spot in the code and they are especially useful when we need to use the same value in multiple places. *Any number or value that is used more than once in the code should usually be stored a constant.*
 
 ```python
 # GLOBAL VARIABLES

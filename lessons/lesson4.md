@@ -76,17 +76,13 @@ def update():
     heath.y += move_y
 
     # If Heath goes off the screen, move him back to somewhere random
-    if heath.left < 0:
-        heath.left = random.randint(0, WIDTH)
-    if heath.right > WIDTH:
-        heath.right = random.randint(0, WIDTH)
-    if heath.top < 0:
-        heath.top = random.randint(0, HEIGHT)
-    if heath.bottom > HEIGHT:
-        heath.bottom = random.randint(0, HEIGHT)
+    if heath.left < 0 or heath.right > WIDTH:
+        heath.x = random.randint(0, WIDTH)
+    if heath.top < 0 or heath.bottom > HEIGHT:
+        heath.y = random.randint(0, HEIGHT)
 ```
 
-In the `update()` function, we move `heath` in a random direction. We use the `HEATH_SPEED` constant to determine how far `heath` moves each frame. Notice that this time around, the movement uses `random.choice()` rather than `random.randint()`. This is because we want him to move the full distance, rather than somewhere in betwene.
+In the `update()` function, we move `heath` in a random direction. We use the `HEATH_SPEED` constant to determine how far `heath` moves each frame. Notice that this time around, the movement uses `random.choice()` rather than `random.randint()`. This is because we want him to move the full distance, rather than somewhere in between.
 
 We also check if `heath` goes off the screen, and if he does, we move him back to a random position.
 
@@ -146,5 +142,5 @@ Complete the TODO comments in the sample code:
 ## Challenge
 
 - Add a timer to the game. The timer should start at 30 seconds and count down to 0. When the timer reaches 0, the game should end. You can use the `clock.schedule_interval()` function to run a function every second to update the timer. You will need to add a new global variable to store the timer value, and you will need to add code to draw the timer on the screen.
-- Add a game over screen that displays the final score when the timer reaches 0. You can use a new global variable to keep track of whether the game is over or not. When the timer reaches 0, set this variable to `True` and display the game over screen. You can use the `screen.draw.text()` fnction to display the final score on the game over screen.
+- Add a game over screen that displays the final score when the timer reaches 0. You can use a new global variable to keep track of whether the game is over or not. When the timer reaches 0, set this variable to `True` and display the game over screen. You can use the `screen.draw.text()` function to display the final score on the game over screen.
 - Add a restart button to the game over screen that allows the player to restart the game. You can use the `on_mouse_down()` function to check for a click on the restart button, and reset the game state if the button is clicked.

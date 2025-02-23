@@ -12,15 +12,25 @@ In PyGame Zero (as with lots of game development frameworks), the game loop has 
 
 So far, we have only used the `update()` and `draw()` functions. In this lesson, we will learn how to use the `on_mouse_down()` function to detect when the mouse is clicked - which represents our first use of Events in the game loop.
 
-## Mouse Clicks
+## Mouse Input in PyGame Zero
 
 In PyGame Zero, we can detect when the mouse is clicked by using the `on_mouse_down()` function. This function is called whenever the mouse button is pressed. Other functions like `on_mouse_up()` and `on_mouse_move()` are also available, but we will focus on `on_mouse_down()` for now.
 
-The function takes two arguments: the `pos` (position) of the mouse (a tuple of `(x, y)` coordinates), and the `button` that was pressed (a number representing the button that was pressed).
+The simplest version of using `on_mouse_down()` looks like this:
+
+```python
+def on_mouse_down(pos):
+    print('Mouse clicked at', pos)
+```
+
+This code would print the position of the mouse each time the mouse is clicked to the Python console. The `pos` argument is a tuple of `(x, y)` coordinates that represent the position of the mouse when it was clicked.
+
+The `on_mouse_down` function takes two optional arguments: the `pos` (position) of the mouse (a tuple of `(x, y)` coordinates), and the `button` that was pressed (a number representing the button that was pressed). If you don't put them in the functon definition (the `def` line), they will still be passed to the function, but you won't be able to use them.
 
 ## Our Sample Code
 
 - Download the sample code here: [4 - Mouse Clicks](https://github.com/HeathmontGameDesign/LearningPGZ/blob/main/4_Mouse_Clicks/4_sample.py), [Images folder](https://github.com/HeathmontGameDesign/LearningPGZ/tree/main/4_Mouse_Clicks/images)
+- *Note: the tick and cross images are new and will be needed for this code to run.*
 
 In the sample code, Heath is currently moving randomly across the screen. It looks a little bit weird, but it will work fine for today's game. You need to click on Heath correctly, as often as you can. Lets take a look at what is happening at the moment.
 

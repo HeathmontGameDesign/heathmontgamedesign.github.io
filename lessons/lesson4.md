@@ -69,6 +69,7 @@ To use `score` in the `on_mouse_down()` and `draw()` functions, we need to decla
 
 ```python
 def update():
+    global score
     # Heath moves HEATH_SPEED pixels in a random direction
     move_x = random.choice([HEATH_SPEED, -HEATH_SPEED])
     move_y = random.choice([HEATH_SPEED, -HEATH_SPEED])

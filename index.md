@@ -27,10 +27,10 @@ Each lesson gives you:
 - [Lesson 2: Actors and Movement](lessons/lesson2.md)
 - [Lesson 3: Collision Detection](lessons/lesson3.md)
 - [Lesson 4: Mouse Clicks](lessons/lesson4.md)
-- [Lesson 5: Sound and Music](lessons/lesson5.md)
-- [Lesson 6: Splash Screens and Game Flow](lessons/lesson6.md)
+- [Lesson 5: Lists and Sounds](lessons/lesson5.md)
+- [Lesson 6: Starting from Scratch](lessons/lesson6.md)
 
-## Additional Optional Activities
+## Additional Optional Activities (Pages in Progress)
 
 - [Generative Art](activities/generative_art.md)
 - [Drawing with the Mouse](activities/drawing_with_the_mouse.md)

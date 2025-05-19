@@ -51,12 +51,14 @@ for number in numbers:
 In Pygame Zero, the most common use of lists is for a set of actors. This allows us to store multiple actors in a single variable and perform actions on all of them at once. This is especially useful when I want to create multiple actors of the same type, such as enemies or bullets.
 
 ```python
+
 # Create a list of actors
 enemies = []
 for i in range(5):
     enemy = Actor('enemy') # Create a new enemy actor
     enemy.pos = random.randint(0, WIDTH), random.randint(0, HEIGHT) # Set a random position for the enemy
     enemies.append(enemy) # Add the enemy to the list
+    
 ```
 
 In this example, we create an empty list called `enemies` and then use a `for` loop to create five enemy actors. Each enemy is given a random position on the screen and then added to the `enemies` list using the `append()` method.

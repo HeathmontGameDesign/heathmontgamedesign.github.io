@@ -50,7 +50,7 @@ extends Node2D
 var enemies = []
 
 func _ready():
-    # Create a list of enemy sprites
+    # Create an array of enemy sprites
     for i in range(5):
         var enemy = Sprite2D.new()  # Create a new Sprite2D
         enemy.texture = load("res://assets/enemy.png")  # Load the enemy texture

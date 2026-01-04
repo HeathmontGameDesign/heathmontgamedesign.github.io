@@ -1,31 +1,39 @@
-# Setting up your laptop for PyGame Zero
+# Setting up your laptop for Godot
 
-## Step 1: Install the Mu Code Editor
+## Step 1: Install the Godot Engine
 
-The Mu code editor is a simple code editor that is designed for beginners. It is a great tool for writing Python code and is perfect for PyGame Zero. You can download the Mu code editor from the following link:
+The Godot Engine is a free and open-source game engine that is perfect for beginners and professionals alike. It comes with a built-in code editor and a visual interface for creating games. You can download Godot from the following link:
 
-[Download Mu Code Editor](https://codewith.mu/en/download)
+[Download Godot Engine](https://godotengine.org/download)
 
-Choose the version that is appropriate for your operating system (Windows for most of you, Mac for some, Linux if you are that kind of fun).
-
----
-
-Run the installer and follow the instructions to install the Mu code editor on your laptop.
+Choose the version that is appropriate for your operating system (Windows for most of you, Mac for some, Linux if you are that kind of fun). **Download the Standard version** (not the .NET version unless instructed otherwise).
 
 ---
 
-## Step 2: Setting the mode and environment variables
+Run the installer and follow the instructions to install Godot on your laptop. For Windows, you may simply need to extract the downloaded zip file and run the executable - no installation required!
 
-Once you have installed the Mu code editor, you need to set the **mode** to `PyGame Zero`. This is done by clicking on the mode button in the top right corner of the Mu code editor and selecting `PyGame Zero` from the list of options. This is not actually required, but it provides extra help (like an easy link through to the images folder).
+---
 
-### Environment Variables
+## Step 2: Getting Familiar with Godot
 
-When you load a PyGame Zero window, by default it opens quite a long way down the screen, which on small laptop screens can be quite annoying. There are a few ways to fix this but the easiest is to set the default variable inside Mu Code.
+When you first open Godot, you'll see the Project Manager. This is where you can create new projects or open existing ones.
 
-To do so:
+### Creating Your First Project
 
-- Click on the Settings cog in the bottom right corner of the screen
-- Choose the 'Python Environment' tab
-- In the 'Environment Variables' box, type `SDL_VIDEO_WINDOW_POS=50,100`
-  - *(you can change the numbers if you want the window to open in a different position)*
-- Click 'OK' and test your program to see if it opens in the right spot.
+1. Click on "New Project" in the Project Manager
+2. Choose a name for your project (e.g., "MyFirstGame")
+3. Select a location on your computer to save the project
+4. Choose "Forward+" as the Renderer (good for most 2D and 3D games)
+5. Click "Create & Edit"
+
+### The Godot Editor
+
+Once your project opens, you'll see the main Godot interface with several key areas:
+
+- **Viewport** (center): This is where you'll see your game and edit scenes
+- **Scene Dock** (left): Shows the hierarchy of nodes in your current scene
+- **FileSystem Dock** (bottom-left): Shows all files in your project
+- **Inspector** (right): Shows properties of the currently selected node
+- **Script Editor**: Click on the "Script" tab at the top to write code
+
+Don't worry if this looks overwhelming at first - we'll take it step by step in the lessons!

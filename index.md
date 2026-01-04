@@ -4,15 +4,15 @@ title: "Heathmont Game Design"
 
 Welcome to the website for Year 9 Game Design. This website includes links to the exercises we cover in class as well as giving you access to other handy resources.
 
-## PyGame Zero
+## Godot Engine
 
-The main development environment for Game Design is through the `Python` programming language using a library called `PyGame Zero`. PyGame Zero is a wrapper around the PyGame library that makes it easier to create games.
+The main development environment for Game Design is through the `Godot Engine`. Godot is a free and open-source game engine that uses its own scripting language called `GDScript`, which is similar to Python. Godot makes it easy to create 2D and 3D games with a visual editor and powerful scripting capabilities.
 
-## Learning PyGame Zero
+## Learning Godot
 
-The following activities are designed to help you learn how to use PyGame Zero to create games. Each activity will introduce you to a new concept or feature of PyGame Zero and will provide you with an opportunity to practice using it.
+The following activities are designed to help you learn how to use Godot to create games. Each activity will introduce you to a new concept or feature of Godot and will provide you with an opportunity to practice using it.
 
-Before beginning these activities, make sure you have accesed the [setup instructions](setup.md) to ensure you have the necessary software installed on your laptop.
+Before beginning these activities, make sure you have accessed the [setup instructions](setup.md) to ensure you have the necessary software installed on your laptop.
 
 Each lesson gives you:
 

@@ -1,6 +1,6 @@
-# Lesson 2: Actors and Movement
+# Lesson 2: Sprites and Movement
 
-Drawings are nice and all, but a game requires interactivity and movement. In PyGame Zero, we use **actors** to represent moving objects in our game. Actors can be:
+Drawings are nice and all, but a game requires interactivity and movement. In Godot, we use **Sprites** (specifically Sprite2D nodes) to represent moving objects in our game. Sprites can be:
 
 - a player character
 - an enemy
@@ -8,70 +8,71 @@ Drawings are nice and all, but a game requires interactivity and movement. In Py
 - an obstacle
 - or any other object that incorporates interactivity.
 
-Actors are variables that store information about the object, such as its position, size, and image. This information gets used to draw the actor on the screen and to move it around. Just because an object is an actor doesn't mean it has to move, or even be visible. It just means that it can be.
+Sprites are nodes that store information about the object, such as its position, size, and texture (image). This information gets used to draw the sprite on the screen and to move it around. Just because an object is a sprite doesn't mean it has to move, or even be visible. It just means that it can be.
 
-## Creating an Actor
+## Creating a Sprite
 
-To create an actor, we use the `Actor` class. Here is an example:
+To create a sprite, we add a Sprite2D node to our scene. We can do this through the editor or through code. Here is an example of setting up a sprite in the editor and then referencing it in code:
 
-```python
-player = Actor('player', (400, 300))
+1. In the Scene dock, click the "+" button to add a new node
+2. Search for "Sprite2D" and select it
+3. In the Inspector, click on the "Texture" property and load your image
+4. Position the sprite by changing its Position property
+
+In your script (attached to the root node or the sprite itself), you can then reference and control the sprite:
+
+```gdscript
+extends Sprite2D
+
+func _ready():
+    position = Vector2(400, 300)
 ```
 
-`player` is the name of the variable that stores the actor. `'player'` (in quotes) is the name of the image file that represents the actor. `(400, 300)` is the starting position of the actor on the screen. This code goes at the start of the program.
+`position` is a built-in property of all Node2D objects (including Sprite2D). `Vector2(400, 300)` is the starting position of the sprite on the screen. The `_ready()` function is called when the node first enters the scene.
 
-## Drawing an Actor
+## The `_process()` Function
 
-To draw an actor on the screen, we call the `actor.draw()` function, inside our game's draw function. That is a little bit confusing, but here is an example:
-
-```python
-
-def draw():
-    player.draw()
-```
-
-This code tells PyGame Zero to draw the `player` actor on the screen. As with most programming, each line is called sequentially, so if we have multiple actors, the last one drawn will appear on top.
-
-## The `update()` Function
-
-The `update()` function is called every frame of the game. This is where we put code that changes the game state, such as moving actors.
+The `_process(delta)` function is called every frame of the game. This is where we put code that changes the game state, such as moving sprites. The `delta` parameter tells us how much time has passed since the last frame, which helps keep movement smooth and consistent.
 
 ## Responding to Input - using if statements
 
-In later lessons we will use event-based functions to respond to input, but for now we will check for keyboard input in the `update()` function. We can use `if` statements to check if a key is pressed. Here is an example:
+We can check for keyboard input in the `_process()` function using Godot's `Input` singleton. We can use `if` statements to check if a key is pressed. Here is an example:
 
-```python
+```gdscript
+extends Sprite2D
 
-def update():
-    if keyboard.left:
-        player.x = player.x - 2
-    if keyboard.right:
-        player.x = player.x + 2
+func _process(delta):
+    if Input.is_action_pressed("ui_left"):
+        position.x -= 2
+    if Input.is_action_pressed("ui_right"):
+        position.x += 2
 ```
 
-This code checks if the left or right arrow keys are pressed, and moves the player actor left or right accordingly. It changes the `x` position of the player actor by 2 pixels (down to go left, up to go right).
+This code checks if the left or right arrow keys are pressed, and moves the sprite left or right accordingly. It changes the `x` position of the sprite by 2 pixels each frame (subtracting to go left, adding to go right).
+
+Godot uses "input actions" which can be configured in Project Settings > Input Map. The built-in actions like "ui_left" and "ui_right" are already configured for arrow keys.
 
 ## Sample Code
 
-You now have all the information you need to play around with actors and movement in PyGame Zero. It is also your first introduction to Heath, the Heathmont Game Design Robot!
+You now have all the information you need to play around with sprites and movement in Godot. It is also your first introduction to Heath, the Heathmont Game Design Robot!
 
 ![Heath](/assets/images/heath.png)
 
 To get started:
 
-- Download the sample code here: [Lesson 2: Actors and Movement](https://github.com/HeathmontGameDesign/LearningPGZ/tree/main/2_Actors_and_Movement)
-  - Download the whole folder as a zip file and extract it to your computer. This keeps the images folder in the correct place.
-- Open the code in Mu and run it to see what it does.
-- Underneath each "#TODO" comment, add your own code to:
+- Download the sample code here: [Lesson 2: Sprites and Movement](https://github.com/HeathmontGameDesign/LearningGodot/tree/main/2_Sprites_and_Movement)
+  - Download the whole folder and import it as a project in Godot. This keeps the assets in the correct place.
+- Open the project in Godot and run it to see what it does.
+- Following the comments in the code, modify the script to:
   - allow Heath to move up and down
-  - add a ghost actor that moves slowly across the screen
+  - add a ghost sprite that moves slowly across the screen
 
 ## Challenge
 
 Create a copy of your completed sample code and modify it so that:
 
-- Once the ghost actor reaches the right side of the screen, it reappears on the left side.
-- Include a second ghost actor that moves up and down. Have the second ghost go the other way when it reaches the top or bottom of the screen.
-- (If you succeed with the first two) Add a third ghost actor that moves randomly around the screen. *(Investigate the random module for help with this)*
+- Once the ghost sprite reaches the right side of the screen, it reappears on the left side.
+- Include a second ghost sprite that moves up and down. Have the second ghost go the other way when it reaches the top or bottom of the screen.
+- (If you succeed with the first two) Add a third ghost sprite that moves randomly around the screen. *(Look up RandomNumberGenerator in Godot for help with this)*
 
-Name your program `2_ghost.py`
+Save your scene as `2_ghost.tscn`

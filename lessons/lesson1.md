@@ -1,10 +1,10 @@
 # Lesson 1: Draw to Screen
 
-To start with PyGame Zero, you need to know how to work with the screen. The screen is where everything happens in your game. You can draw shapes, images, and text on the screen.
+To start with Godot, you need to know how to work with the screen and draw things. The screen is where everything happens in your game. You can draw shapes, images, and text on the screen using Godot's drawing functions.
 
-## Coordinates in PyGame Zero
+## Coordinates in Godot
 
-PyGame Zero uses a coordinate system to decide where to draw things on the screen. The top-left corner is the origin (0, 0). The x-axis increases as you travel to the right, and the y-axis as you go down. This is different from the coordinate system you learned in maths, where the y-axis increases as you go up.
+Godot uses a coordinate system to decide where to draw things on the screen. The top-left corner is the origin (0, 0). The x-axis increases as you travel to the right, and the y-axis as you go down. This is different from the coordinate system you learned in maths, where the y-axis increases as you go up.
 
 ### Understanding Coordinates
 
@@ -14,42 +14,50 @@ The image above shows how points on a screen become coordinates. The top-left co
 
 ## Drawing Shapes
 
-PyGame Zero has functions to draw shapes on the screen. Here is an example:
+Godot has multiple ways to draw shapes on the screen. The most common approach for learning is to use a script attached to a Node2D and override the `_draw()` function. Here is an example:
 
-```python
-def draw():
-    screen.draw.circle((400, 300), 30, WHITE)
+```gdscript
+extends Node2D
+
+func _draw():
+    draw_circle(Vector2(400, 300), 30, Color.WHITE)
 ```
 
-This code draws a circle. To fill the circle, use `screen.draw.filled_circle()`. The parameters are:
+This code draws a circle. The parameters are:
 
-- The first parameter is the center of the circle, a tuple (x, y). Here, it is (400, 300).
+- The first parameter is the center of the circle as a Vector2 (x, y). Here, it is Vector2(400, 300).
 - The second parameter is the radius of the circle. Here, it is 30 pixels.
-- The third parameter is the color of the circle. Here, it is `WHITE`, which has been pre-defined in our code.
+- The third parameter is the color of the circle. Here, it is Color.WHITE, which is a built-in color in Godot.
+
+To draw a filled circle (which is the default), you can use the same `draw_circle()` function. For an outline only, you would need to draw the circle with a small radius difference or use other drawing techniques.
 
 ### Rectangles
 
-Rectangles get treated slightly differently in PyGame Zero. To draw a rectangle, we create the rectangle and then draw it. The other difference is that the position of a rectangle is its top left corner, not its centre. Here is an example:
+Rectangles are drawn similarly in Godot. To draw a rectangle, we use the `draw_rect()` function. The position of a rectangle is its top-left corner, not its center. Here is an example:
 
-```python
+```gdscript
+extends Node2D
 
-def draw():
-    screen.draw.rect(Rect(100, 100, 50, 50), BLUE)
+func _draw():
+    var rect = Rect2(100, 100, 50, 50)
+    draw_rect(rect, Color.BLUE)
 ```
 
 This code draws a rectangle. The parameters are:
 
-- The first parameter is a `Rect` object. This object is created by passing in the x and y coordinates of the top-left corner of the rectangle, followed by the width and height of the rectangle. Here, it is `Rect(100, 100, 50, 50)`.
-- The second parameter is the color of the rectangle. Here, it is `BLUE`, which has been pre-defined in our code.
+- The first parameter is a `Rect2` object. This object is created by providing the x and y coordinates of the top-left corner of the rectangle, followed by the width and height of the rectangle. Here, it is Rect2(100, 100, 50, 50).
+- The second parameter is the color of the rectangle. Here, it is Color.BLUE, which is a built-in color in Godot.
 
 ## Sample Code
 
-You now have all the information you need to play around with drawing in PyGame Zero. To get started:
+You now have all the information you need to play around with drawing in Godot. To get started:
 
-- Download the sample code here: [Lesson 1: Draw to Screen](https://github.com/HeathmontGameDesign/LearningPGZ/blob/main/1_Draw_to_screen/1_sample.py)
-- Open the code in Mu and run it to see what it does.
-- Underneath each "#TODO" comment, add your own code to draw different shapes on the screen.
+- Download the sample code here: [Lesson 1: Draw to Screen](https://github.com/HeathmontGameDesign/LearningGodot/blob/main/1_Draw_to_screen/1_sample.gd)
+- Create a new Scene in Godot with a Node2D as the root node
+- Attach a new script to the Node2D and replace it with the sample code
+- Run the scene to see what it does
+- Following the comments in the code, add your own code to draw different shapes on the screen
 
 ## Challenge
 
-Create a new PyGame Zero program that draws a house. The house should have a roof, a door, and windows. Name your program `1_house.py`.
+Create a new Godot scene that draws a house. The house should have a roof, a door, and windows. Save your scene as `1_house.tscn`.

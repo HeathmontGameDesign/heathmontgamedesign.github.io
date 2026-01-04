@@ -141,7 +141,7 @@ The `get_tree().create_timer(0.5).timeout.connect(hide_cross)` line creates a on
 
 Complete the TODO comments in the sample code:
   
-- You will need to check if the mouse click position is within Heath's bounds. One approach is to calculate a rectangle around Heath based on his position and texture size, then check if the click point is inside. For example: `var heath_rect = Rect2(heath.position - heath.texture.get_size() / 2, heath.texture.get_size())` and then use `heath_rect.has_point(event.position)`.
+- You will need to check if the mouse click position is within Heath's bounds. A simple approach is to check the distance between the click position and Heath's position. For example: `if event.position.distance_to(heath.position) < 50:` (where 50 is an approximate radius for Heath). For a more accurate rectangle-based check, you could add an Area2D node to Heath with a CollisionShape2D and use collision detection.
 - You will need to increase or decrease the `score` variable based on whether there is a collision or not with the mouse position.
 - You will need to change the texture of the `cross` sprite to a tick or a cross based on whether there is a collision or not. You can do this with `cross.texture = load("res://path/to/tick.png")`.
 - The score should already be displayed if you're using a Label node or the drawing function shown above.

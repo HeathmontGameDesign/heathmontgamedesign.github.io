@@ -38,7 +38,7 @@ In Godot, we typically use Area2D nodes for detecting collisions. An Area2D can 
 extends Area2D
 
 func _ready():
-    connect("area_entered", Callable(self, "_on_area_entered"))
+    area_entered.connect(_on_area_entered)
 
 func _on_area_entered(area):
     if area.is_in_group("coins"):

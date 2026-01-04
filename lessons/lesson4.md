@@ -80,21 +80,28 @@ func _process(delta):
         heath.position.x = randf_range(0, SCREEN_WIDTH)
     if heath.position.y < 0 or heath.position.y > SCREEN_HEIGHT:
         heath.position.y = randf_range(0, SCREEN_HEIGHT)
+    
+    # Redraw to update the score display
+    queue_redraw()
 ```
 
 In the `_process()` function, we move Heath in a random direction. We use the `pick_random()` method on an array to randomly choose between moving forward or backward. This is similar to Python's `random.choice()`.
 
 We also check if Heath goes off the screen, and if he does, we move him back to a random position.
 
+We call `queue_redraw()` to ensure our custom drawing (like the score) gets updated each frame.
+
 Note that we haven't included any of the code for the mouse clicks yet. We will add this in the `_input()` function.
 
 ```gdscript
 func _draw():
     # Draw the score
-    draw_string(ThemeDB.fallback_font, Vector2(10, 30), "Score: " + str(score), HORIZONTAL_ALIGNMENT_LEFT, -1, 20)
+    var font = ThemeDB.fallback_font
+    var font_size = 20
+    draw_string(font, Vector2(10, 30), "Score: " + str(score), HORIZONTAL_ALIGNMENT_LEFT, -1, font_size)
 ```
 
-In Godot, we use the `_draw()` function to draw custom elements. Here we're drawing the score text. Godot provides `draw_string()` for text rendering. The parameters are the font, position, text, alignment, width, and font size.
+In Godot, we use the `_draw()` function to draw custom elements. Here we're drawing the score text. Godot provides `draw_string()` for text rendering. The parameters are the font, position, text, alignment, width (-1 means no limit), and font size.
 
 Note: In a real game, you might prefer to use a Label node for displaying text rather than drawing it manually, but this demonstrates the drawing function.
 

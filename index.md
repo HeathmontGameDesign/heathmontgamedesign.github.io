@@ -24,10 +24,10 @@ Each lesson gives you:
 ## Activities
 
 - [Lesson 1: Draw to Screen](lessons/lesson1.md)
-- [Lesson 2: Actors and Movement](lessons/lesson2.md)
+- [Lesson 2: Sprites and Movement](lessons/lesson2.md)
 - [Lesson 3: Collision Detection](lessons/lesson3.md)
 - [Lesson 4: Mouse Clicks](lessons/lesson4.md)
-- [Lesson 5: Lists and Sounds](lessons/lesson5.md)
+- [Lesson 5: Arrays and Sounds](lessons/lesson5.md)
 - [Lesson 6: Starting from Scratch](lessons/lesson6.md)
 
 ## Additional Optional Activities (Pages in Progress)

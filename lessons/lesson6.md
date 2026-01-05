@@ -30,9 +30,7 @@ The ball is the centerpiece of our game. We'll use an `Area2D` node with a sprit
 1. Add an `Area2D` node as a child of Game and name it "Ball"
 2. Add a `Sprite2D` child to Ball
 3. Add a `CollisionShape2D` child to Ball
-4. For the Sprite2D texture, you can:
-   - Use a simple white circle image
-   - Or draw a circle using a script with the `_draw()` function and `draw_circle()` method
+4. For the Sprite2D texture, use a simple white circle image (you can create one in any image editor, or download sprites from the [sample project](https://github.com/HeathmontGameDesign/LearningGodot/tree/main/6_Pong_Game))
 5. Select the CollisionShape2D and set its shape to a CircleShape2D (in the Inspector, under Shape, choose "New CircleShape2D")
 6. Adjust the radius to match your sprite (around 10-15 pixels works well)
 

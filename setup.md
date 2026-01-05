@@ -37,3 +37,5 @@ Once your project opens, you'll see the main Godot interface with several key ar
 - **Script Editor**: Click on the "Script" tab at the top to write code
 
 Don't worry if this looks overwhelming at first - we'll take it step by step in the lessons!
+
+For a detailed explanation of each area and how to use them effectively, check out the comprehensive [Godot Editor Interface Guide](godot-editor-interface.md).

@@ -16,6 +16,8 @@ Before beginning these activities, make sure you have accessed the [setup instru
 
 Once you have Godot installed, take some time to familiarize yourself with the [Godot Editor Interface](godot-editor-interface.md). Understanding the different areas of the editor will help you navigate more efficiently as you work through the lessons.
 
+For quick reference while coding, check out the [Godot Built-in Function Reference](godot-function-reference.md) which provides detailed explanations of commonly used functions with examples and links to official documentation.
+
 Each lesson gives you:
 
 - A brief introduction to the concept or feature being covered

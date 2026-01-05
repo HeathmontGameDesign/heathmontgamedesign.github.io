@@ -328,14 +328,14 @@ func _process(_delta):
 		check_game_over()
 		if not game_over:
 			reset_ball()
-		update_score_display()
+			update_score_display()
 	
 	if ball.position.x > 800:
 		player_score += 1
 		check_game_over()
 		if not game_over:
 			reset_ball()
-		update_score_display()
+			update_score_display()
 
 func check_game_over():
 	if player_score >= WINNING_SCORE:

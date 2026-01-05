@@ -1,6 +1,8 @@
 # Lesson 2: Sprites and Movement
 
-Drawings are nice and all, but a game requires interactivity and movement. In Godot, we use **Sprites** (specifically Sprite2D nodes) to represent moving objects in our game. Sprites can be:
+(Previous lesson: [Lesson 1 - Draw to Screen](lesson1.md) | Main Page: [Heathmont Game Design](index.md) | Next lesson: [Lesson 3 - Collision Detection](lesson3.md))
+
+Drawings are nice and all, but a game requires interactivity and movement. In Godot, we use **Sprites** (specifically Sprite2D nodes) to represent visually the objects in our game. Sprites can represent:
 
 - a player character
 - an enemy
@@ -8,7 +10,7 @@ Drawings are nice and all, but a game requires interactivity and movement. In Go
 - an obstacle
 - or any other object that incorporates interactivity.
 
-Sprites are nodes that store information about the object, such as its position, size, and texture (image). This information gets used to draw the sprite on the screen and to move it around. Just because an object is a sprite doesn't mean it has to move, or even be visible. It just means that it can be.
+Sprites are usually created as child nodes (often of a `CharacterBody2D` or `Area2D` node) and they store image or animation information about an object in the game. This information gets used to draw the sprite on the screen and to move it around. Today we will create a simple sprite and make it move around the screen using keyboard input.
 
 ## Creating a Sprite
 
@@ -16,8 +18,8 @@ To create a sprite, we add a Sprite2D node to our scene. We can do this through 
 
 1. In the Scene dock, click the "+" button to add a new node
 2. Search for "Sprite2D" and select it
-3. In the Inspector, click on the "Texture" property and load your image
-4. Position the sprite by changing its Position property
+3. In the Inspector, click on the "Texture" property and load your Heath image
+4. Position the sprite by changing its Position property or by dragging it around in the viewport
 
 In your script (attached to the root node or the sprite itself), you can then reference and control the sprite:
 
@@ -28,15 +30,15 @@ func _ready():
     position = Vector2(400, 300)
 ```
 
-`position` is a built-in property of all Node2D objects (including Sprite2D). `Vector2(400, 300)` is the starting position of the sprite on the screen. The `_ready()` function is called when the node first enters the scene.
+`position` is a built-in property of all Node2D objects (including Sprite2D). By setting the `position` as `Vector2(400, 300)`, we are changing the starting position of the sprite on the screen. The `_ready()` function is called when the node first enters the scene. **Code inside `_ready()` is executed once at the start of the game.**
 
 ## The `_process()` Function
 
-The `_process(delta)` function is called every frame of the game. This is where we put code that changes the game state, such as moving sprites. The `delta` parameter tells us how much time has passed since the last frame, which helps keep movement smooth and consistent.
+The `_process(delta)` function is called every frame of the game. This is where we put code that changes the game state, such as moving sprites. The `delta` parameter tells us how much time has passed since the last frame, which helps keep movement smooth and consistent. **Code inside `_process()` runs continuously while the game is running.**
 
 ## Responding to Input - using if statements
 
-We can check for keyboard input in the `_process()` function using Godot's `Input` singleton. We can use `if` statements to check if a key is pressed. Here is an example:
+We can check for keyboard input in the `_process()` function using Godot's `Input` class. We can use `if` statements to check if a key is pressed. Here is an example:
 
 ```gdscript
 extends Sprite2D
@@ -50,7 +52,7 @@ func _process(delta):
 
 This code checks if the left or right arrow keys are pressed, and moves the sprite left or right accordingly. It changes the `x` position of the sprite by 2 pixels each frame (subtracting to go left, adding to go right).
 
-Godot uses "input actions" which can be configured in Project Settings > Input Map. The built-in actions like "ui_left" and "ui_right" are already configured for arrow keys.
+Godot uses "input actions" which can be configured in Project Settings > Input Map. The built-in actions like `"ui_left"` and `"ui_right"` are already configured for arrow keys. When we create more complex games we would always define our own input actions.
 
 ## Sample Code
 
@@ -65,7 +67,7 @@ To get started:
 - Open the project in Godot and run it to see what it does.
 - Following the comments in the code, modify the script to:
   - allow Heath to move up and down
-  - add a ghost sprite that moves slowly across the screen
+  - add a ghost sprite that moves slowly across the screen (without any input)
 
 ## Challenge
 

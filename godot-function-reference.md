@@ -315,15 +315,17 @@ func _ready():
 ```gdscript
 extends Node2D
 
-var rng = RandomNumberGenerator.new()
-
 func _ready():
-    # Random dice roll (1-6)
-    var dice = rng.randi_range(1, 6)
+    # Random dice roll (1-6) using global function
+    var dice = randi_range(1, 6)
     print("You rolled: ", dice)
     
     # Random choice (0-3)
-    var choice = rng.randi_range(0, 3)
+    var choice = randi_range(0, 3)
+    
+    # Alternative: Using RandomNumberGenerator for more control
+    var rng = RandomNumberGenerator.new()
+    var custom_dice = rng.randi_range(1, 20)
 ```
 
 **Parameters:**
@@ -335,11 +337,12 @@ func _ready():
 **Key Points:**
 - Returns an integer (whole number)
 - Both endpoints are inclusive
-- Requires RandomNumberGenerator instance
-- In Godot 4, instances are automatically randomized upon creation
+- Available as a global function (recommended for simple use cases)
+- Also available as RandomNumberGenerator instance method for more control
+- In Godot 4.2+, global random functions use an internal global RNG
 - For floats, use `randf_range()` instead
 
-**Official Documentation:** [RandomNumberGenerator.randi_range()](https://docs.godotengine.org/en/stable/classes/class_randomnumbergenerator.html#class-randomnumbergenerator-method-randi-range)
+**Official Documentation:** [@GlobalScope.randi_range()](https://docs.godotengine.org/en/stable/classes/class_@globalscope.html#class-globalscope-method-randi-range)
 
 ---
 

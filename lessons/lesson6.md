@@ -136,7 +136,7 @@ The AI paddle will automatically follow the ball's position.
 2. Rename it to "AIPaddle"
 3. In the Inspector, change its position to the right side (around x=750)
 
-Replace the script on AIPaddle with a new script (right-click AIPaddle > Attach Script > Replace existing). This script will be saved as `ai_paddle.gd`:
+Replace the script on AIPaddle with a new script (right-click AIPaddle > Detach Script, then AIPaddle > Attach Script). This script will be saved as `ai_paddle.gd`:
 
 ```gdscript
 extends Area2D

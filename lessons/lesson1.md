@@ -12,11 +12,11 @@ Godot uses a coordinate system to decide where to draw things on the screen. The
 
 The image above shows how points on a screen become coordinates. The top-left corner is (0, 0). The magenta dot is at (300, 0). The blue dot is at (50, 150).
 
-In Godot, positions on the screen are represented using **Vector2**. A Vector2 is a 2D vector that stores two values: an x component and a y component. While you can think of Vector2 as a coordinate pair (x, y), it's more than just a position - it can also represent direction, velocity, or any two-dimensional quantity.
+In Godot, positions on the screen are represented using **Vector2**. A vector is a mathematical value that can represent position, direction, or movement in space. A Vector2 is a 2D vector that stores two values: an x component and a y component. While you can think of Vector2 as a coordinate pair (x, y), it's more than just a position - it can also represent direction, velocity, or any two-dimensional quantity.
 
 When we write `Vector2(400, 300)`:
-- The first value (400) is the x component - how far right from the origin
-- The second value (300) is the y component - how far down from the origin
+- The first value (400) is the x component - how far right from the origin.
+- The second value (300) is the y component - how far down from the origin.
 
 Vector2 is used throughout Godot for positions, sizes, directions, and more. For now, we'll use it to specify where to draw shapes on the screen.
 

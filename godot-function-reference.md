@@ -15,7 +15,7 @@ This page provides a quick reference for commonly used built-in functions in God
 | [`Vector2()`](#vector2) | Creates a 2D vector for positions, directions, or velocities | [View Docs](https://docs.godotengine.org/en/stable/classes/class_vector2.html) |
 | [`queue_free()`](#queue_free) | Marks a node for deletion at the end of the current frame | [View Docs](https://docs.godotengine.org/en/stable/classes/class_node.html#class-node-method-queue-free) |
 | [`randf_range()`](#randf_range) | Returns a random float within a specified range | [View Docs](https://docs.godotengine.org/en/stable/classes/class_@globalscope.html#class-globalscope-method-randf-range) |
-| [`randi_range()`](#randi_range) | Returns a random integer within a specified range | [View Docs](https://docs.godotengine.org/en/stable/classes/class_randomnumbergenerator.html#class-randomnumbergenerator-method-randi-range) |
+| [`randi_range()`](#randi_range) | Returns a random integer within a specified range | [View Docs](https://docs.godotengine.org/en/stable/classes/class_@globalscope.html#class-globalscope-method-randi-range) |
 | [`print()`](#print) | Outputs text to the console for debugging | [View Docs](https://docs.godotengine.org/en/stable/classes/class_@globalscope.html#class-globalscope-method-print) |
 | [`connect()`](#connect) | Connects a signal to a method | [View Docs](https://docs.godotengine.org/en/stable/classes/class_object.html#class-object-method-connect) |
 

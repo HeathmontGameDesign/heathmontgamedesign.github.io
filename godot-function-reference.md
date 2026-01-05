@@ -5,7 +5,7 @@ This page provides a quick reference for commonly used built-in functions in God
 ## Quick Reference Table
 
 | Function | Description | Official Docs |
-|----------|-------------|---------------|
+| -------- | ----------- | ------------- |
 | [`_ready()`](#_ready) | Called when a node enters the scene tree for the first time | [View Docs](https://docs.godotengine.org/en/stable/classes/class_node.html#class-node-method-ready) |
 | [`_process(delta)`](#_process) | Called every frame to update game logic | [View Docs](https://docs.godotengine.org/en/stable/classes/class_node.html#class-node-method-process) |
 | [`_draw()`](#_draw) | Called when a CanvasItem needs to be redrawn | [View Docs](https://docs.godotengine.org/en/stable/classes/class_canvasitem.html#class-canvasitem-method-draw) |

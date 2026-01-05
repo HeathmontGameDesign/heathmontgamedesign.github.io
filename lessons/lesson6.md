@@ -99,7 +99,8 @@ const SPEED = 400
 # Screen boundaries - these should match your project settings.
 const SCREEN_HEIGHT = 600
 # Adjust PADDLE_HEIGHT to match your actual paddle sprite height.
-# This is used to prevent the paddle from moving off-screen.
+# To find your sprite height: Select the Sprite2D node and check the Texture 
+# section in the Inspector. Look at the image dimensions (e.g., 20x100 means 100 pixels tall).
 const PADDLE_HEIGHT = 100
 
 func _ready():
@@ -152,6 +153,7 @@ const SPEED = 350
 # Screen boundaries - should match project settings.
 const SCREEN_HEIGHT = 600
 # Adjust PADDLE_HEIGHT to match your paddle sprite height.
+# Check the Sprite2D's texture dimensions in the Inspector to find the correct height.
 const PADDLE_HEIGHT = 100
 
 # Reference to the ball node - we need this to track its position.
@@ -166,6 +168,8 @@ func _ready():
 	# Get reference to the ball node using get_parent() to access the Game node,
 	# then get_node() to find the Ball child node.
 	# This allows the AI to track where the ball is at all times.
+	# Note: This assumes your scene structure has Ball as a sibling node.
+	# If you renamed your Ball node, update "Ball" to match the new name.
 	ball = get_parent().get_node("Ball")
 
 func _process(delta):

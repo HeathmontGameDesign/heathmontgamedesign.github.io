@@ -318,7 +318,7 @@ extends Node2D
 var rng = RandomNumberGenerator.new()
 
 func _ready():
-    rng.randomize()  # Initialize with random seed
+    rng.randomize()  # Optional: explicit randomization / Godot 3.x compatibility
     
     # Random dice roll (1-6)
     var dice = rng.randi_range(1, 6)

@@ -318,8 +318,6 @@ extends Node2D
 var rng = RandomNumberGenerator.new()
 
 func _ready():
-    rng.randomize()  # Optional: explicit randomization / Godot 3.x compatibility
-    
     # Random dice roll (1-6)
     var dice = rng.randi_range(1, 6)
     print("You rolled: ", dice)
@@ -338,7 +336,7 @@ func _ready():
 - Returns an integer (whole number)
 - Both endpoints are inclusive
 - Requires RandomNumberGenerator instance
-- Call `randomize()` first to initialize
+- In Godot 4, instances are automatically randomized upon creation
 - For floats, use `randf_range()` instead
 
 **Official Documentation:** [RandomNumberGenerator.randi_range()](https://docs.godotengine.org/en/stable/classes/class_randomnumbergenerator.html#class-randomnumbergenerator-method-randi-range)

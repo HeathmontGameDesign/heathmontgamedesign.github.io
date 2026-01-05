@@ -14,6 +14,8 @@ The following activities are designed to help you learn how to use Godot to crea
 
 Before beginning these activities, make sure you have accessed the [setup instructions](setup.md) to ensure you have the necessary software installed on your laptop.
 
+Once you have Godot installed, take some time to familiarize yourself with the [Godot Editor Interface](godot-editor-interface.md). Understanding the different areas of the editor will help you navigate more efficiently as you work through the lessons.
+
 Each lesson gives you:
 
 - A brief introduction to the concept or feature being covered

@@ -1,5 +1,7 @@
 # Lesson 6: Creating a Simple Pong Game
 
+*Previous lesson: [Lesson 5 - Arrays and Sounds](lesson5.md) | Main Page: [Heathmont Game Design](index.md) | Next lesson: [Lesson 7 - Creating a Basic State Machine](lesson7.md)*
+
 Pong is one of the earliest video games and a perfect project for learning game development fundamentals. In this lesson, you'll create a complete Pong game from scratch, bringing together everything you've learned about sprites, movement, collision detection, and game logic.
 
 ## What is Pong?
@@ -9,6 +11,7 @@ Pong is a two-player game that simulates table tennis. Each player controls a pa
 ## Project Overview
 
 Our Pong game will include:
+
 - A player-controlled paddle (left side)
 - An AI-controlled paddle (right side)
 - A ball that bounces between paddles and walls
@@ -64,21 +67,21 @@ const SCREEN_WIDTH = 800
 const SCREEN_HEIGHT = 600
 
 func _ready():
-	# _ready() is called once when the node enters the scene tree.
-	# Position the ball in the center of the screen at start.
-	position = Vector2(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
+    # _ready() is called once when the node enters the scene tree.
+    # Position the ball in the center of the screen at start.
+    position = Vector2(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
 
 func _process(delta):
-	# _process() is called every frame. Delta is the time elapsed since last frame.
-	# Move the ball by adding velocity multiplied by delta time.
-	# Using delta ensures movement is smooth regardless of frame rate.
-	position += velocity * delta
-	
-	# Check if ball hits top or bottom walls and reverse vertical direction.
-	# position.y <= 0 means ball hit the top.
-	# position.y >= SCREEN_HEIGHT means ball hit the bottom.
-	if position.y <= 0 or position.y >= SCREEN_HEIGHT:
-		velocity.y = -velocity.y  # Reverse vertical direction (bounce)
+    # _process() is called every frame. Delta is the time elapsed since last frame.
+    # Move the ball by adding velocity multiplied by delta time.
+    # Using delta ensures movement is smooth regardless of frame rate.
+    position += velocity * delta
+    
+    # Check if ball hits top or bottom walls and reverse vertical direction.
+    # position.y <= 0 means ball hit the top.
+    # position.y >= SCREEN_HEIGHT means ball hit the bottom.
+    if position.y <= 0 or position.y >= SCREEN_HEIGHT:
+        velocity.y = -velocity.y  # Reverse vertical direction (bounce)
 ```
 
 **What this code does:** This script makes the ball move continuously across the screen and bounce when it hits the top or bottom edges. The ball starts in the center and moves at an angle determined by its velocity vector. The `delta` parameter ensures smooth movement regardless of frame rate - this is a Godot best practice for frame-rate independent movement.
@@ -114,26 +117,26 @@ const SCREEN_HEIGHT = 600
 const PADDLE_HEIGHT = 100
 
 func _ready():
-	# _ready() is called once when the node enters the scene.
-	# Position paddle on the left side of screen, centered vertically.
-	# x = 50 puts it near the left edge, y = SCREEN_HEIGHT / 2 centers it.
-	position = Vector2(50, SCREEN_HEIGHT / 2)
+    # _ready() is called once when the node enters the scene.
+    # Position paddle on the left side of screen, centered vertically.
+    # x = 50 puts it near the left edge, y = SCREEN_HEIGHT / 2 centers it.
+    position = Vector2(50, SCREEN_HEIGHT / 2)
 
 func _process(delta):
-	# _process() is called every frame.
-	# Check for arrow key input and move paddle accordingly.
-	
-	# If up arrow is pressed, move paddle up (decrease y position).
-	if Input.is_action_pressed("ui_up"):
-		position.y -= SPEED * delta
-	# If down arrow is pressed, move paddle down (increase y position).
-	if Input.is_action_pressed("ui_down"):
-		position.y += SPEED * delta
-	
-	# Keep paddle within screen boundaries using clamp().
-	# clamp() restricts a value between a minimum and maximum.
-	# This prevents the paddle from moving off the top or bottom of the screen.
-	position.y = clamp(position.y, PADDLE_HEIGHT / 2, SCREEN_HEIGHT - PADDLE_HEIGHT / 2)
+    # _process() is called every frame.
+    # Check for arrow key input and move paddle accordingly.
+    
+    # If up arrow is pressed, move paddle up (decrease y position).
+    if Input.is_action_pressed("ui_up"):
+        position.y -= SPEED * delta
+    # If down arrow is pressed, move paddle down (increase y position).
+    if Input.is_action_pressed("ui_down"):
+        position.y += SPEED * delta
+    
+    # Keep paddle within screen boundaries using clamp().
+    # clamp() restricts a value between a minimum and maximum.
+    # This prevents the paddle from moving off the top or bottom of the screen.
+    position.y = clamp(position.y, PADDLE_HEIGHT / 2, SCREEN_HEIGHT - PADDLE_HEIGHT / 2)
 ```
 
 **What this code does:** This script allows the player to control the left paddle using the up and down arrow keys. The paddle moves at a constant speed (400 pixels per second) and is prevented from moving off-screen by the `clamp()` function. The `clamp()` function is a built-in Godot function that keeps the paddle position within bounds - a common best practice for boundary checking.
@@ -170,33 +173,33 @@ const PADDLE_HEIGHT = 100
 var ball
 
 func _ready():
-	# _ready() is called once when the node enters the scene.
-	# Position paddle on the right side of screen, centered vertically.
-	# x = 750 puts it near the right edge, y = SCREEN_HEIGHT / 2 centers it.
-	position = Vector2(750, SCREEN_HEIGHT / 2)
-	
-	# Get reference to the ball node using get_parent() to access the Game node,
-	# then get_node() to find the Ball child node.
-	# This allows the AI to track where the ball is at all times.
-	# Note: This assumes your scene structure has Ball as a sibling node.
-	# If you renamed your Ball node, update "Ball" to match the new name.
-	ball = get_parent().get_node("Ball")
+    # _ready() is called once when the node enters the scene.
+    # Position paddle on the right side of screen, centered vertically.
+    # x = 750 puts it near the right edge, y = SCREEN_HEIGHT / 2 centers it.
+    position = Vector2(750, SCREEN_HEIGHT / 2)
+    
+    # Get reference to the ball node using get_parent() to access the Game node,
+    # then get_node() to find the Ball child node.
+    # This allows the AI to track where the ball is at all times.
+    # Note: This assumes your scene structure has Ball as a sibling node.
+    # If you renamed your Ball node, update "Ball" to match the new name.
+    ball = get_parent().get_node("Ball")
 
 func _process(delta):
-	# _process() is called every frame.
-	# Only proceed if we successfully got a reference to the ball.
-	if ball:
-		# Simple AI logic: move paddle toward ball's y position.
-		# If paddle is above the ball, move down.
-		if position.y < ball.position.y:
-			position.y += SPEED * delta
-		# If paddle is below the ball, move up.
-		elif position.y > ball.position.y:
-			position.y -= SPEED * delta
-		
-		# Keep paddle within screen boundaries using clamp().
-		# This prevents the paddle from moving off the top or bottom.
-		position.y = clamp(position.y, PADDLE_HEIGHT / 2, SCREEN_HEIGHT - PADDLE_HEIGHT / 2)
+    # _process() is called every frame.
+    # Only proceed if we successfully got a reference to the ball.
+    if ball:
+        # Simple AI logic: move paddle toward ball's y position.
+        # If paddle is above the ball, move down.
+        if position.y < ball.position.y:
+            position.y += SPEED * delta
+        # If paddle is below the ball, move up.
+        elif position.y > ball.position.y:
+            position.y -= SPEED * delta
+        
+        # Keep paddle within screen boundaries using clamp().
+        # This prevents the paddle from moving off the top or bottom.
+        position.y = clamp(position.y, PADDLE_HEIGHT / 2, SCREEN_HEIGHT - PADDLE_HEIGHT / 2)
 ```
 
 **What this code does:** This script creates a simple but effective AI opponent that automatically moves toward the ball's vertical position. It gets a reference to the ball using `get_parent().get_node()` - a Godot best practice for accessing sibling nodes. The AI is intentionally slightly slower than the player (350 vs 400 speed) to make the game balanced and winnable.
@@ -220,39 +223,39 @@ const SCREEN_WIDTH = 800
 const SCREEN_HEIGHT = 600
 
 func _ready():
-	# Position ball in center at start.
-	position = Vector2(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
-	
-	# Connect the area_entered signal to our collision handler function.
-	# This signal is emitted whenever another Area2D enters this one's collision space.
-	# This is a Godot best practice for event-driven collision detection.
-	area_entered.connect(_on_area_entered)
+    # Position ball in center at start.
+    position = Vector2(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
+    
+    # Connect the area_entered signal to our collision handler function.
+    # This signal is emitted whenever another Area2D enters this one's collision space.
+    # This is a Godot best practice for event-driven collision detection.
+    area_entered.connect(_on_area_entered)
 
 func _process(delta):
-	# Move the ball every frame using delta time.
-	position += velocity * delta
-	
-	# Bounce off top and bottom walls.
-	if position.y <= 0 or position.y >= SCREEN_HEIGHT:
-		velocity.y = -velocity.y
+    # Move the ball every frame using delta time.
+    position += velocity * delta
+    
+    # Bounce off top and bottom walls.
+    if position.y <= 0 or position.y >= SCREEN_HEIGHT:
+        velocity.y = -velocity.y
 
 func _on_area_entered(area):
-	# This function is called automatically when the ball collides with another Area2D.
-	# The 'area' parameter is the node that the ball collided with.
-	
-	# Check if the colliding node is one of the paddles by checking its name.
-	if area.name == "PlayerPaddle" or area.name == "AIPaddle":
-		# Reverse the horizontal direction to make ball bounce back.
-		velocity.x = -velocity.x
-		
-		# Add realistic physics: hitting different parts of paddle affects ball angle.
-		# Calculate where on the paddle the ball hit.
-		var paddle_center = area.position.y
-		var hit_offset = position.y - paddle_center
-		# Multiply by 2 to create noticeable angle changes.
-		# If ball hits top of paddle (negative offset), it goes upward more.
-		# If ball hits bottom of paddle (positive offset), it goes downward more.
-		velocity.y += hit_offset * 2
+    # This function is called automatically when the ball collides with another Area2D.
+    # The 'area' parameter is the node that the ball collided with.
+    
+    # Check if the colliding node is one of the paddles by checking its name.
+    if area.name == "PlayerPaddle" or area.name == "AIPaddle":
+        # Reverse the horizontal direction to make ball bounce back.
+        velocity.x = -velocity.x
+        
+        # Add realistic physics: hitting different parts of paddle affects ball angle.
+        # Calculate where on the paddle the ball hit.
+        var paddle_center = area.position.y
+        var hit_offset = position.y - paddle_center
+        # Multiply by 2 to create noticeable angle changes.
+        # If ball hits top of paddle (negative offset), it goes upward more.
+        # If ball hits bottom of paddle (positive offset), it goes downward more.
+        velocity.y += hit_offset * 2
 ```
 
 **What this code does:** This updated Ball script adds collision detection using signals. The `area_entered.connect()` line sets up an event listener that calls `_on_area_entered()` whenever the ball touches a paddle. Using signals like `area_entered` is a Godot best practice for event-driven programming - it makes the code cleaner and more maintainable. The hit offset calculation adds realistic physics: hitting the edge of the paddle sends the ball at a steeper angle, while hitting the center sends it straighter.
@@ -280,42 +283,42 @@ var player_paddle
 var ai_paddle
 
 func _ready():
-	# _ready() is called once when the scene starts.
-	# Get references to our game object nodes using $ shorthand.
-	# $ is short for get_node() - a Godot best practice for cleaner code.
-	ball = $Ball
-	player_paddle = $PlayerPaddle
-	ai_paddle = $AIPaddle
+    # _ready() is called once when the scene starts.
+    # Get references to our game object nodes using $ shorthand.
+    # $ is short for get_node() - a Godot best practice for cleaner code.
+    ball = $Ball
+    player_paddle = $PlayerPaddle
+    ai_paddle = $AIPaddle
 
 func _process(_delta):
-	# _process() is called every frame.
-	# Note: we use _delta with underscore prefix because we don't use the delta parameter.
-	# This prevents Godot from showing a warning about unused parameters.
-	
-	# Check if ball went off the left side of screen (player missed).
-	# If so, AI scores a point.
-	if ball.position.x < 0:
-		ai_score += 1  # Increment AI score
-		print("AI Score: ", ai_score)  # Print to console for debugging
-		reset_ball()  # Reset ball to center for next round
-	
-	# Check if ball went off the right side of screen (AI missed).
-	# If so, player scores a point.
-	if ball.position.x > 800:
-		player_score += 1  # Increment player score
-		print("Player Score: ", player_score)  # Print to console
-		reset_ball()  # Reset ball to center for next round
+    # _process() is called every frame.
+    # Note: we use _delta with underscore prefix because we don't use the delta parameter.
+    # This prevents Godot from showing a warning about unused parameters.
+    
+    # Check if ball went off the left side of screen (player missed).
+    # If so, AI scores a point.
+    if ball.position.x < 0:
+        ai_score += 1  # Increment AI score
+        print("AI Score: ", ai_score)  # Print to console for debugging
+        reset_ball()  # Reset ball to center for next round
+    
+    # Check if ball went off the right side of screen (AI missed).
+    # If so, player scores a point.
+    if ball.position.x > 800:
+        player_score += 1  # Increment player score
+        print("Player Score: ", player_score)  # Print to console
+        reset_ball()  # Reset ball to center for next round
 
 func reset_ball():
-	# This function resets the ball to the center after someone scores.
-	# Reset ball position to center of screen.
-	ball.position = Vector2(400, 300)
-	# Reverse horizontal direction so ball goes toward the player who just scored.
-	# This is fair: if you scored, you have to return the ball.
-	ball.velocity.x = -ball.velocity.x
-	# Randomize vertical velocity to add variety to each serve.
-	# randf_range() generates a random float between -200 and 200.
-	ball.velocity.y = randf_range(-200, 200)
+    # This function resets the ball to the center after someone scores.
+    # Reset ball position to center of screen.
+    ball.position = Vector2(400, 300)
+    # Reverse horizontal direction so ball goes toward the player who just scored.
+    # This is fair: if you scored, you have to return the ball.
+    ball.velocity.x = -ball.velocity.x
+    # Randomize vertical velocity to add variety to each serve.
+    # randf_range() generates a random float between -200 and 200.
+    ball.velocity.y = randf_range(-200, 200)
 ```
 
 **What this code does:** This is the main game controller that manages scoring logic. It watches the ball's position every frame and checks if it went off either side of the screen. When the ball goes off the left, the AI scores; when it goes off the right, the player scores. The `$` syntax is a Godot shorthand for `get_node()` - another best practice for cleaner code. Using `randf_range()` adds variety to each serve by randomizing the ball's vertical direction.
@@ -355,49 +358,50 @@ var player_score_label
 var ai_score_label
 
 func _ready():
-	# Get references to all game objects and UI elements.
-	ball = $Ball
-	player_paddle = $PlayerPaddle
-	ai_paddle = $AIPaddle
-	# Access labels through the CanvasLayer using path notation.
-	# The path goes: CanvasLayer (child of Game) -> PlayerScoreLabel (child of CanvasLayer)
-	player_score_label = $CanvasLayer/PlayerScoreLabel
-	ai_score_label = $CanvasLayer/AIScoreLabel
-	
-	# Initialize score display to show "0" at game start.
-	update_score_display()
+    # Get references to all game objects and UI elements.
+    ball = $Ball
+    player_paddle = $PlayerPaddle
+    ai_paddle = $AIPaddle
+    # Access labels through the CanvasLayer using path notation.
+    # The path goes: CanvasLayer (child of Game) -> PlayerScoreLabel (child of CanvasLayer)
+    player_score_label = $CanvasLayer/PlayerScoreLabel
+    ai_score_label = $CanvasLayer/AIScoreLabel
+    
+    # Initialize score display to show "0" at game start.
+    update_score_display()
 
 func _process(_delta):
-	# Check if ball went off left side (AI scores).
-	if ball.position.x < 0:
-		ai_score += 1
-		reset_ball()
-		update_score_display()  # Update UI to show new score
-	
-	# Check if ball went off right side (Player scores).
-	if ball.position.x > 800:
-		player_score += 1
-		reset_ball()
-		update_score_display()  # Update UI to show new score
+    # Check if ball went off left side (AI scores).
+    if ball.position.x < 0:
+        ai_score += 1
+        reset_ball()
+        update_score_display()  # Update UI to show new score
+    
+    # Check if ball went off right side (Player scores).
+    if ball.position.x > 800:
+        player_score += 1
+        reset_ball()
+        update_score_display()  # Update UI to show new score
 
 func update_score_display():
-	# This function updates the text of the score labels.
-	# str() converts the integer score to a string for display.
-	# Separating this into its own function is good practice - 
-	# it makes the code more modular and easier to maintain.
-	player_score_label.text = str(player_score)
-	ai_score_label.text = str(ai_score)
+    # This function updates the text of the score labels.
+    # str() converts the integer score to a string for display.
+    # Separating this into its own function is good practice - 
+    # it makes the code more modular and easier to maintain.
+    player_score_label.text = str(player_score)
+    ai_score_label.text = str(ai_score)
 
 func reset_ball():
-	# Reset ball position and randomize direction.
-	ball.position = Vector2(400, 300)
-	ball.velocity.x = -ball.velocity.x
-	ball.velocity.y = randf_range(-200, 200)
+    # Reset ball position and randomize direction.
+    ball.position = Vector2(400, 300)
+    ball.velocity.x = -ball.velocity.x
+    ball.velocity.y = randf_range(-200, 200)
 ```
 
 **What this code does:** This enhanced version of the game controller adds visual score display. It gets references to the Label nodes and updates their text whenever someone scores. The `update_score_display()` function uses `str()` to convert the integer score to a string that can be displayed in the label. Separating the score update into its own function is good practice - it makes the code more modular and easier to maintain.
 
 **Where it lives:** This replaces the earlier game.gd script on the Game node. Your scene hierarchy should now look like:
+
 - Game (Node2D) - has game.gd script
   - Ball (Area2D) - has ball.gd script
   - PlayerPaddle (Area2D) - has player_paddle.gd script
@@ -435,81 +439,81 @@ var player_score_label
 var ai_score_label
 
 func _ready():
-	# Get references to all nodes.
-	ball = $Ball
-	player_paddle = $PlayerPaddle
-	ai_paddle = $AIPaddle
-	player_score_label = $CanvasLayer/PlayerScoreLabel
-	ai_score_label = $CanvasLayer/AIScoreLabel
-	# Initialize display to show starting scores (0 and 0).
-	update_score_display()
+    # Get references to all nodes.
+    ball = $Ball
+    player_paddle = $PlayerPaddle
+    ai_paddle = $AIPaddle
+    player_score_label = $CanvasLayer/PlayerScoreLabel
+    ai_score_label = $CanvasLayer/AIScoreLabel
+    # Initialize display to show starting scores (0 and 0).
+    update_score_display()
 
 func _process(_delta):
-	# If game is over, only check for restart input.
-	if game_over:
-		# Check if player pressed Space/Enter (ui_accept action).
-		# is_action_just_pressed() only triggers once per keypress.
-		if Input.is_action_just_pressed("ui_accept"):
-			restart_game()
-		# Return early to skip the rest of _process().
-		# This stops the game from continuing after game over.
-		return
-	
-	# Game logic only runs if game is not over.
-	# Check if ball went off left side (AI scores).
-	if ball.position.x < 0:
-		ai_score += 1
-		check_game_over()  # Check if AI reached winning score
-		if not game_over:
-			reset_ball()
-			update_score_display()
-	
-	# Check if ball went off right side (Player scores).
-	if ball.position.x > 800:
-		player_score += 1
-		check_game_over()  # Check if player reached winning score
-		if not game_over:
-			reset_ball()
-			update_score_display()
+    # If game is over, only check for restart input.
+    if game_over:
+        # Check if player pressed Space/Enter (ui_accept action).
+        # is_action_just_pressed() only triggers once per keypress.
+        if Input.is_action_just_pressed("ui_accept"):
+            restart_game()
+        # Return early to skip the rest of _process().
+        # This stops the game from continuing after game over.
+        return
+    
+    # Game logic only runs if game is not over.
+    # Check if ball went off left side (AI scores).
+    if ball.position.x < 0:
+        ai_score += 1
+        check_game_over()  # Check if AI reached winning score
+        if not game_over:
+            reset_ball()
+            update_score_display()
+    
+    # Check if ball went off right side (Player scores).
+    if ball.position.x > 800:
+        player_score += 1
+        check_game_over()  # Check if player reached winning score
+        if not game_over:
+            reset_ball()
+            update_score_display()
 
 func check_game_over():
-	# This function checks if either player has reached the winning score.
-	if player_score >= WINNING_SCORE:
-		game_over = true
-		# Modify the label to show victory message.
-		player_score_label.text = str(player_score) + " - YOU WIN!"
-	elif ai_score >= WINNING_SCORE:
-		game_over = true
-		# Modify the label to show defeat message.
-		ai_score_label.text = str(ai_score) + " - AI WINS!"
-	
-	# If game is over, stop the ball from moving.
-	if game_over:
-		# Vector2.ZERO is a built-in constant equal to Vector2(0, 0).
-		# Using built-in constants is a Godot best practice.
-		ball.velocity = Vector2.ZERO
+    # This function checks if either player has reached the winning score.
+    if player_score >= WINNING_SCORE:
+        game_over = true
+        # Modify the label to show victory message.
+        player_score_label.text = str(player_score) + " - YOU WIN!"
+    elif ai_score >= WINNING_SCORE:
+        game_over = true
+        # Modify the label to show defeat message.
+        ai_score_label.text = str(ai_score) + " - AI WINS!"
+    
+    # If game is over, stop the ball from moving.
+    if game_over:
+        # Vector2.ZERO is a built-in constant equal to Vector2(0, 0).
+        # Using built-in constants is a Godot best practice.
+        ball.velocity = Vector2.ZERO
 
 func restart_game():
-	# This function resets everything to start a new game.
-	player_score = 0
-	ai_score = 0
-	game_over = false
-	# Update display to clear the win/lose messages.
-	update_score_display()
-	# Reset ball position and velocity.
-	reset_ball()
-	ball.velocity = Vector2(300, 200)
+    # This function resets everything to start a new game.
+    player_score = 0
+    ai_score = 0
+    game_over = false
+    # Update display to clear the win/lose messages.
+    update_score_display()
+    # Reset ball position and velocity.
+    reset_ball()
+    ball.velocity = Vector2(300, 200)
 
 func update_score_display():
-	# Update the score labels with current scores.
-	player_score_label.text = str(player_score)
-	ai_score_label.text = str(ai_score)
+    # Update the score labels with current scores.
+    player_score_label.text = str(player_score)
+    ai_score_label.text = str(ai_score)
 
 func reset_ball():
-	# Reset ball to center with randomized direction.
-	ball.position = Vector2(400, 300)
-	ball.velocity.x = -ball.velocity.x
-	ball.velocity.y = randf_range(-200, 200)
+    # Reset ball to center with randomized direction.
+    ball.position = Vector2(400, 300)
+    ball.velocity.x = -ball.velocity.x
+    ball.velocity.y = randf_range(-200, 200)
 ```
 
 **What this code does:** This complete version adds a game over condition and restart functionality. It uses a `game_over` boolean flag to track the game state. When someone reaches 5 points, the game stops processing and displays a win/lose message. The `return` statement in `_process()` when game is over prevents further processing, which is more efficient. Using `Vector2.ZERO` is cleaner than writing `Vector2(0, 0)` - embracing Godot's built-in constants is a best practice. Using `const WINNING_SCORE` makes it easy to adjust game difficulty later without hunting through the code.
@@ -535,6 +539,7 @@ Throughout this tutorial, we've followed several Godot best practices:
 Complete sample code for this project can be found here: [Lesson 6: Pong Game](https://github.com/HeathmontGameDesign/LearningGodot/tree/main/6_Pong_Game)
 
 The repository includes:
+
 - Complete project files
 - Sprite assets for the ball and paddles
 - A README with setup instructions
@@ -554,7 +559,9 @@ To test your Pong game:
 Once you have a working Pong game, try these enhancements:
 
 ### Challenge 1: Add Sound Effects
+
 Add sound effects when:
+
 - The ball hits a paddle
 - The ball hits a wall
 - A player scores
@@ -563,25 +570,33 @@ Add sound effects when:
 Look back at Lesson 5 for information on adding sounds to your game.
 
 ### Challenge 2: Increase Difficulty
+
 Make the game progressively harder:
+
 - Increase ball speed each time it hits a paddle
 - Make the AI paddle faster as the game progresses
 - Add a maximum speed limit so it doesn't get too fast
 
 ### Challenge 3: Two-Player Mode
+
 Modify the game to allow two human players:
+
 - Change the AI paddle to respond to different keys (like W and S)
 - Add a menu to choose between 1-player and 2-player mode
 
 ### Challenge 4: Visual Polish
+
 Enhance the game's appearance:
+
 - Add a dotted center line
 - Create a trail effect behind the ball
 - Add particle effects when the ball hits something
 - Change colors based on who's winning
 
 ### Challenge 5: Power-ups
+
 Add power-ups that randomly appear:
+
 - Paddle size increase/decrease
 - Ball speed modifications
 - Multi-ball mode (multiple balls at once)
@@ -589,6 +604,7 @@ Add power-ups that randomly appear:
 ## Further Learning
 
 This Pong game demonstrates fundamental game development concepts:
+
 - Game loops and delta time
 - Player input handling
 - AI opponent logic
@@ -597,3 +613,5 @@ This Pong game demonstrates fundamental game development concepts:
 - UI updates
 
 These concepts apply to many other types of games. Experiment with modifying the game mechanics to create your own variations!
+
+*Previous lesson: [Lesson 5 - Arrays and Sounds](lesson5.md) | Main Page: [Heathmont Game Design](index.md) | Next lesson: [Lesson 7 - Creating a Basic State Machine](lesson7.md)*

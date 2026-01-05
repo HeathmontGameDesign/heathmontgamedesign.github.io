@@ -1,5 +1,6 @@
 # Lesson 1: Draw to Screen
 
+*[Main Page: [Heathmont Game Design](index.md) | Next lesson: [Lesson 2 - Sprites and Movement](lesson2.md)]*
 To start with Godot, you need to know how to work with the screen and draw things. The screen is where everything happens in your game. You can draw shapes, images, and text on the screen using Godot's drawing functions.
 
 ## Coordinates and Vectors in Godot
@@ -70,3 +71,5 @@ You now have all the information you need to play around with drawing in Godot. 
 ## Challenge
 
 Create a new Godot scene that draws a house. The house should have a roof, a door, and windows. Save your scene as `1_house.tscn`.
+
+*[Main Page: [Heathmont Game Design](index.md) | Next lesson: [Lesson 2 - Sprites and Movement](lesson2.md)]*

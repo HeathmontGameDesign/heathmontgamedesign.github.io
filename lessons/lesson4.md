@@ -1,5 +1,7 @@
 # Lesson 4 - Mouse Clicks
 
+*Previous lesson: [Lesson 3 - Collision Detection](lesson3.md) | Main Page: [Heathmont Game Design](index.md) | Next lesson: [Lesson 5 - Arrays and Sounds](lesson5.md)*
+
 So far we have only used very basic keyboard input inside the `_process()` function in Godot. In this lesson, we will learn how to use the mouse to interact with our games. We will learn how to detect when the mouse is clicked, and how to use the position of the mouse to interact with sprites on the screen.
 
 ## Reminder: The Game Loop
@@ -128,10 +130,12 @@ The `_input()` function is already moving the cross to the position of the mouse
 The `TODO` comment is asking you to add code to check for a collision between Heath and the cross. In Godot, you can check if two sprites overlap by comparing their positions and sizes, or by using collision shapes. For this simple case, you might check if the click position is within Heath's bounding rectangle.
 
 If there is a collision, you need to:
+
 - Increase the score by 1
 - Change the texture of the cross sprite to show a tick image
 
 If there is not a collision, you need to:
+
 - Decrease the score by 1
 - Change the texture of the cross sprite to show a cross image
 
@@ -152,3 +156,5 @@ Complete the TODO comments in the sample code:
 - Add a timer to the game. The timer should start at 30 seconds and count down to 0. When the timer reaches 0, the game should end. You can use `get_tree().create_timer()` or a Timer node to run a function every second to update the timer. You will need to add a new variable to store the timer value, and you will need to display the timer on the screen.
 - Add a game over screen that displays the final score when the timer reaches 0. You can use a variable to keep track of whether the game is over or not. When the timer reaches 0, set this variable to true and display the game over screen. You can use a Label node or the drawing function to display the final score on the game over screen.
 - Add a restart button to the game over screen that allows the player to restart the game. You can use the `_input()` function to check for a click on the restart button (by checking the click position), and reset the game state if the button is clicked.
+
+*Previous lesson: [Lesson 3 - Collision Detection](lesson3.md) | Main Page: [Heathmont Game Design](index.md) | Next lesson: [Lesson 5 - Arrays and Sounds](lesson5.md)*

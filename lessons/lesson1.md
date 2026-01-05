@@ -2,15 +2,23 @@
 
 To start with Godot, you need to know how to work with the screen and draw things. The screen is where everything happens in your game. You can draw shapes, images, and text on the screen using Godot's drawing functions.
 
-## Coordinates in Godot
+## Coordinates and Vectors in Godot
 
 Godot uses a coordinate system to decide where to draw things on the screen. The top-left corner is the origin (0, 0). The x-axis increases as you travel to the right, and the y-axis as you go down. This is different from the coordinate system you learned in maths, where the y-axis increases as you go up.
 
-### Understanding Coordinates
+### Understanding Coordinates and Vector2
 
 ![Coordinate System](/assets/images/coordinates.png)
 
 The image above shows how points on a screen become coordinates. The top-left corner is (0, 0). The magenta dot is at (300, 0). The blue dot is at (50, 150).
+
+In Godot, positions on the screen are represented using **Vector2**. A vector is a mathematical value that can represent position, direction, or movement in space. A Vector2 is a 2D vector that stores two values: an x component and a y component. While you can think of Vector2 as a coordinate pair (x, y), it's more than just a position - it can also represent direction, velocity, or any two-dimensional quantity.
+
+When we write `Vector2(400, 300)`:
+- The first value (400) is the x component - how far right from the origin.
+- The second value (300) is the y component - how far down from the origin.
+
+Vector2 is used throughout Godot for positions, sizes, directions, and more. For now, we'll use it to specify where to draw shapes on the screen.
 
 ## Drawing Shapes
 
@@ -25,7 +33,7 @@ func _draw():
 
 This code draws a circle. The parameters are:
 
-- The first parameter is the center of the circle as a Vector2 (x, y). Here, it is Vector2(400, 300).
+- The first parameter is the center of the circle as a Vector2. Here, `Vector2(400, 300)` means the center is 400 pixels from the left and 300 pixels from the top of the screen.
 - The second parameter is the radius of the circle. Here, it is 30 pixels.
 - The third parameter is the color of the circle. Here, it is Color.WHITE, which is a built-in color in Godot.
 

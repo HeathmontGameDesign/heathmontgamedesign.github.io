@@ -23,7 +23,19 @@ Our Pong game will include:
 2. Rename the root node to "Game"
 3. Save the scene as `pong.tscn`
 
-### Step 2: Create the Ball
+### Step 2: Set the Window Size
+
+Before we start adding game objects, we need to configure the game window size to match the dimensions used in our code (800x600 pixels).
+
+1. In the top menu, click **Project** → **Project Settings**
+2. In the Project Settings window, navigate to **Display** → **Window** in the left sidebar
+3. Find the **Viewport Width** setting and set it to **800**
+4. Find the **Viewport Height** setting and set it to **600**
+5. Click **Close** to save the settings
+
+These dimensions define the size of your game window and match the `SCREEN_WIDTH` and `SCREEN_HEIGHT` constants used throughout the Pong game scripts. If you want to use different dimensions, you'll need to update these constants in the ball and paddle scripts accordingly.
+
+### Step 3: Create the Ball
 
 The ball is the centerpiece of our game. We'll use an `Area2D` node with a sprite and collision shape.
 
@@ -73,7 +85,7 @@ func _process(delta):
 
 **Where it lives:** This script is attached to the Ball node in your scene. When you run the game, you'll see the ball moving and bouncing off the top and bottom walls, but it will pass through the left and right sides (we'll fix that with scoring later).
 
-### Step 3: Create the Player Paddle
+### Step 4: Create the Player Paddle
 
 Now let's create a paddle that the player can control with the keyboard.
 
@@ -128,7 +140,7 @@ func _process(delta):
 
 **Where it lives:** This script is attached to the PlayerPaddle node in your scene. The paddle will be positioned on the left side of the screen and respond to your keyboard input in real-time when you run the game.
 
-### Step 4: Create the AI Paddle
+### Step 5: Create the AI Paddle
 
 The AI paddle will automatically follow the ball's position.
 
@@ -191,7 +203,7 @@ func _process(delta):
 
 **Where it lives:** This script is attached to the AIPaddle node on the right side of your scene. When you run the game, you'll see the AI paddle automatically track and try to intercept the ball.
 
-### Step 5: Implement Ball-Paddle Collision
+### Step 6: Implement Ball-Paddle Collision
 
 Now we need to make the ball bounce off the paddles. Go back to the Ball node and update its script by adding collision detection. Replace the entire Ball script with this enhanced version:
 
@@ -247,7 +259,7 @@ func _on_area_entered(area):
 
 **Where it lives:** This replaces the earlier ball.gd script on the Ball node. When you run the game now, the ball will bounce off both paddles, not just the walls!
 
-### Step 6: Add Scoring System
+### Step 7: Add Scoring System
 
 Let's add score tracking. Attach a new script to the Game node (the root Node2D). This script will be saved as `game.gd`:
 
@@ -310,7 +322,7 @@ func reset_ball():
 
 **Where it lives:** This script is attached to the Game (root Node2D) node. It sits at the top of the scene hierarchy and coordinates all the game objects below it. When you run the game, you'll see scores printed to the console (at the bottom of the Godot editor) whenever someone scores.
 
-### Step 7: Add Visual Score Display
+### Step 8: Add Visual Score Display
 
 For a better user experience, let's add on-screen score display using Labels. First, set up the UI nodes:
 
@@ -396,7 +408,7 @@ func reset_ball():
 
 When you run the game, you'll now see the scores displayed on screen instead of just in the console!
 
-### Step 8: Add Game Over Condition
+### Step 9: Add Game Over Condition
 
 Let's make the game end when someone reaches 5 points and allow restarting. Replace the entire Game script one final time with this complete version:
 

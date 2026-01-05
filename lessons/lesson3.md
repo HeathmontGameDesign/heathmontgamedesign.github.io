@@ -48,6 +48,7 @@ func _on_area_entered(area):
 This code connects to the "area_entered" signal, which is emitted when another Area2D enters this one's collision space. If the colliding area is in the "coins" group, it moves the coin to a new random position. This means that Heath, the Heathmont Game Design Robot, can collect coins!
 
 To set up collision detection:
+
 1. Add a CollisionShape2D child to your Area2D
 2. Select a shape for the CollisionShape2D (e.g., RectangleShape2D or CircleShape2D)
 3. Adjust the shape to match your sprite

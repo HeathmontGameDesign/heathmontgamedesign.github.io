@@ -2,7 +2,7 @@
 title: "Heathmont Game Design"
 ---
 
-Welcome to the website for Year 9 Game Design. This website includes links to the exercises we cover in class as well as giving you access to other handy resources.
+Welcome to the website for Year 9 Game Design. This website includes links to the exercises we cover in class as well as giving you access to other handy resources. You can view the [slides for this subject here](https://mrmatho.github.io/game-slides/).
 
 ## Godot Engine
 
@@ -12,7 +12,7 @@ The main development environment for Game Design is through the `Godot Engine`. 
 
 The following activities are designed to help you learn how to use Godot to create games. Each activity will introduce you to a new concept or feature of Godot and will provide you with an opportunity to practice using it.
 
-Before beginning these activities, make sure you have accessed the [setup instructions](setup.md) to ensure you have the necessary software installed on your laptop.
+Before beginning these activities, make sure you have accessed the **[setup instructions](setup.md)** to ensure you have the necessary software installed on your laptop.
 
 Once you have Godot installed, take some time to familiarize yourself with the [Godot Editor Interface](godot-editor-interface.md). Understanding the different areas of the editor will help you navigate more efficiently as you work through the lessons.
 

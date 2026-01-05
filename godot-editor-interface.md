@@ -4,9 +4,7 @@ When you open a project in Godot 4.2 or higher, you'll see a powerful and compre
 
 ## Overview of the Main Areas
 
-The Godot editor is divided into several key areas, each serving a specific purpose:
-
-![Godot Editor Interface Overview](/assets/images/godot-editor-overview.png)
+The Godot editor is divided into several key areas, each serving a specific purpose. As you work through the lessons, you'll become familiar with these areas and learn to navigate between them efficiently.
 
 ## 1. Main Toolbar (Top)
 

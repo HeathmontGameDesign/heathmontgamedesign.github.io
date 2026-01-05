@@ -21,12 +21,11 @@ extends Node2D
 var rng = RandomNumberGenerator.new()
 
 func _ready():
-    rng.randomize()  # Initialize with a random seed
     var random_number = rng.randi_range(1, 6)  # Random number between 1 and 6
     print(random_number)
 ```
 
-This code creates a new RandomNumberGenerator, initializes it with a random seed (so we get different results each time), and then generates a random number between 1 and 6. The `randi_range()` function takes two arguments: the lowest number in the range, and the highest number in the range.
+This code creates a new RandomNumberGenerator and generates a random number between 1 and 6. In Godot 4, the RandomNumberGenerator is automatically randomized when created, so we get different results each time. The `randi_range()` function takes two arguments: the lowest number in the range, and the highest number in the range.
 
 For simple random needs, you can also use the global functions like `randf()` for random floats or `randi()` for random integers.
 

@@ -33,6 +33,7 @@ Each lesson gives you:
 - [Lesson 4: Mouse Clicks](lessons/lesson4.md)
 - [Lesson 5: Arrays and Sounds](lessons/lesson5.md)
 - [Lesson 6: Creating a Simple Pong Game](lessons/lesson6.md)
+- [Lesson 7: Creating a Basic State Machine](lessons/lesson7.md)
 
 ## Additional Optional Activities (Pages in Progress)
 

@@ -32,8 +32,8 @@ The ball is the centerpiece of our game. We'll use an `Area2D` node with a sprit
 3. Add a `CollisionShape2D` child to Ball
 4. For the Sprite2D texture, you can:
    - Use a simple white circle image
-   - Or use Godot's built-in shapes by creating a new CircleShape2D and drawing it
-5. Select the CollisionShape2D and set its shape to a CircleShape2D
+   - Or draw a circle using a script with the `_draw()` function and `draw_circle()` method
+5. Select the CollisionShape2D and set its shape to a CircleShape2D (in the Inspector, under Shape, choose "New CircleShape2D")
 6. Adjust the radius to match your sprite (around 10-15 pixels works well)
 
 Attach a script to the Ball node (right-click Ball node > Attach Script > Create). This script will be saved as `ball.gd` in your project folder:

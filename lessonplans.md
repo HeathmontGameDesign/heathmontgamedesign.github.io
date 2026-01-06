@@ -88,3 +88,5 @@ Understand the Godot interface and learn to draw basic shapes using GDScript.
     </tr>
   </tbody>
 </table>
+
+## Lesson 2: Sprites and Movement

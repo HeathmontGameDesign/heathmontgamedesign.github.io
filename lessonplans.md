@@ -35,9 +35,7 @@ Understand the Godot interface and learn to draw basic shapes using GDScript.
     <tr>
       <td>15 mins</td>
       <td colspan = "2">
-
-      **Heathos**:
-      
+      <strong>Heathos:</strong>
       <ul><li> What do we need to bring to class?
       <li> How do you keep up with the work if you miss a lesson?
       <li> <a href="https://heathmontgamedesign.github.io/">Game Design Website</a>
@@ -47,7 +45,6 @@ Understand the Godot interface and learn to draw basic shapes using GDScript.
     <tr>
       <td>20 mins</td>
       <td>
-
       <strong>Setting up Godot:</strong>
       <ul>
       <li>Follow the <a href="https://heathmontgamedesign.github.io/setup.html">setup instructions</a> to install Godot
@@ -61,11 +58,8 @@ Understand the Godot interface and learn to draw basic shapes using GDScript.
     <tr>
       <td>20 mins</td>
       <td>
-
       <strong>Drawing Shapes</strong>:
-      
       Follow the instructions in [Task 1: Draw to Screen](lessons/lesson1.md) .Write a script to draw circles and rectangles on the screen
-
       </td>
       <td>Provide support as students work through the task. Answer questions about GDScript and drawing functions
       </td>
@@ -74,26 +68,19 @@ Understand the Godot interface and learn to draw basic shapes using GDScript.
     <tr>
       <td>20 mins</td>
       <td>
-
       <strong>Challenge</strong>: Create a new Godot scene that draws a house with a roof, door, and windows. Save the scene as `1_house.tscn`
       </td>
       <td>
-
-      - Encourage creativity and problem-solving
-      - Provide hints and tips as needed
-
+      Encourage creativity and problem-solving. Provide hints and tips as needed
       </td>
       <td>Achieve</td>
     </tr>
     <tr>
       <td>5 mins</td>
       <td>
-
-      **Reflection**:
-      
+      <strong>Reflection</strong>:
       - What did you learn today about Godot and drawing shapes?
       - What was the most challenging part of the task?
-
       </td>
       <td> Facilitate a brief class discussion to reflect on learning outcomes
       </td>

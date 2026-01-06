@@ -23,30 +23,30 @@ Understand the Godot interface and learn to draw basic shapes using GDScript.
 ### Activities
 
 <table class="lesson-plan-table">
-  <thead>
-    <tr>
-      <th>Time</th>
-      <th>Students Do</th>
-      <th>Teacher Does</th>
-      <th>Element</th>
-    </tr>
-  </thead>
-   <tbody>
-    <tr>
-      <td>15 mins</td>
-      <td>
-      <strong>Heathos:</strong>
-      <ul><li> What do we need to bring to class?
-      <li> How do you keep up with the work if you miss a lesson?
-      <li> <a href="https://heathmontgamedesign.github.io/">Game Design Website</a>
-      </td>
-      <td>Bridge</td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>Time</th>
+<th>Students Do</th>
+<th>Teacher Does</th>
+<th>Element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>15 mins</td>
+<td markdown="1">
+
+**Heathos:**
+
+- What do we need to bring to class?
+- How do you keep up with the work if you miss a lesson?
+- [Game Design Website](https://heathmontgamedesign.github.io/)
+
+</td>
+<td>Bridge</td>
+<td></td></tr></tbody>
 </table>
 
 ---
 
 ## Lesson 2: Sprites and Movement
-
-

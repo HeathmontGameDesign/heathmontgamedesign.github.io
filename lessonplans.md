@@ -31,6 +31,18 @@ Understand the Godot interface and learn to draw basic shapes using GDScript.
       <th>Element</th>
     </tr>
   </thead>
+   <tbody>
+    <tr>
+      <td>15 mins</td>
+      <td colspan = "2">
+      <strong>Heathos:</strong>
+      <ul><li> What do we need to bring to class?
+      <li> How do you keep up with the work if you miss a lesson?
+      <li> <a href="https://heathmontgamedesign.github.io/">Game Design Website</a>
+      </td>
+      <td>Bridge</td>
+    </tr>
+  </tbody>
 </table>
 
 ---

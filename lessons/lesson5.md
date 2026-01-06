@@ -1,6 +1,6 @@
 # Lesson 5 - Arrays and Sounds
 
-*Previous lesson: [Lesson 4 - Mouse Clicks](lesson4.md) | Main Page: [Heathmont Game Design](index.md) | Next lesson: [Lesson 6 - Creating a Simple Pong Game](lesson6.md)*
+*Previous lesson: [Lesson 4 - Mouse Clicks](lesson4.md) | Main Page: [Heathmont Game Design](/index.md) | Next lesson: [Lesson 6 - Creating a Simple Pong Game](lesson6.md)*
 
 Arrays are a way to store multiple values in a single variable. They are useful for keeping track of multiple items, such as sprites in a game. In this lesson, we will learn how to create and use arrays in Godot.
 
@@ -109,4 +109,4 @@ func play_explosion():
     explosion_sound.play()
 ```
 
-*Previous lesson: [Lesson 4 - Mouse Clicks](lesson4.md) | Main Page: [Heathmont Game Design](index.md) | Next lesson: [Lesson 6 - Creating a Simple Pong Game](lesson6.md)*
+*Previous lesson: [Lesson 4 - Mouse Clicks](lesson4.md) | Main Page: [Heathmont Game Design](/index.md) | Next lesson: [Lesson 6 - Creating a Simple Pong Game](lesson6.md)*

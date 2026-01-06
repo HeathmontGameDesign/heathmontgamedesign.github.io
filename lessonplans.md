@@ -34,7 +34,7 @@ Understand the Godot interface and learn to draw basic shapes using GDScript.
 <tbody>
 <tr>
 <td>15 mins</td>
-<td markdown="1">
+<td markdown="1" colspan="2">
 
 **Heathos:**
 
@@ -44,7 +44,49 @@ Understand the Godot interface and learn to draw basic shapes using GDScript.
 
 </td>
 <td>Bridge</td>
-<td></td></tr></tbody>
+<td></td></tr>
+<tr>
+<td>20 mins</td>
+<td markdown="1">
+
+**Setting up Godot:**
+
+- Follow the <a href="https://heathmontgamedesign.github.io/setup.html">setup instructions</a> to install Godot
+- Create a new project and explore the Godot interface using the <a href="https://heathmontgamedesign.github.io/godot-editor-interface.html">Godot Editor Interface Guide</a>
+
+</td>
+<td> Assist students with installation issues. Guide students through the Godot interface
+</td>
+<td>Bridge, Achieve</td>
+</tr>
+<tr>
+<td>20 mins</td>
+<td>
+<strong>Drawing Shapes</strong>:
+Follow the instructions in <a href="https://heathmontgamedesign.github.io/lessons/lesson1.html">Task 1: Draw to Screen</a> .Write a script to draw circles and rectangles on the screen
+</td>
+<td>Provide support as students work through the task. Answer questions about GDScript and drawing functions
+</td>
+<td>Discover, Achieve</td>
+</tr>
+<tr>
+<td>20 mins</td>
+<td>
+<strong>Challenge</strong>: Create a new Godot scene that draws a house with a roof, door, and windows. Save the scene as `1_house.tscn`
+</td>
+<td>
+Encourage creativity and problem-solving. Provide hints and tips as needed
+</td>
+<td>Achieve</td>
+</tr>
+<tr>
+<td>5 mins</td>
+<td><strong>Reflection</strong>: What did you learn today about Godot and drawing shapes? What was the most challenging part of the task? </td>
+<td> Facilitate a brief class discussion to reflect on learning outcomes
+</td>
+<td>Reflect</td>
+</tr>
+</tbody>
 </table>
 
 ---

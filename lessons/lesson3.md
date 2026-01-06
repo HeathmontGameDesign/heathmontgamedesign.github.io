@@ -1,6 +1,6 @@
 # Lesson 3 - Collision Detection
 
-*Previous lesson: [Lesson 2 - Sprites and Movement](lesson2.md) | Main Page: [Heathmont Game Design](/index.md) | Next lesson: [Lesson 4 - Mouse Clicks](lesson4.md)*
+*Previous lesson: [Lesson 2 - Sprites and Movement](lesson2.md) | Main Page: [Heathmont Game Design](/) | Next lesson: [Lesson 4 - Mouse Clicks](lesson4.md)*
 
 In games, objects interact when they collide. In Godot, we can detect when two objects collide using Area2D nodes and collision signals. This is called **collision detection**. In this lesson as well as using collision detection to make objects interact, we will also learn how to make use of randomness in our games.
 
@@ -69,4 +69,4 @@ Create a bouncing ball game - a ball that bounces around the screen and changes 
 - Add an obstacle of some kind (e.g. a brick, wall or fence) that the ball should bounce off when it collides with it.
 - Add controls for the player to move the obstacle up and down.
 
-*Previous lesson: [Lesson 2 - Sprites and Movement](lesson2.md) | Main Page: [Heathmont Game Design](/index.md) | Next lesson: [Lesson 4 - Mouse Clicks](lesson4.md)*
+*Previous lesson: [Lesson 2 - Sprites and Movement](lesson2.md) | Main Page: [Heathmont Game Design](/) | Next lesson: [Lesson 4 - Mouse Clicks](lesson4.md)*

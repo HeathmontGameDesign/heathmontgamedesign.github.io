@@ -1,6 +1,6 @@
 # Lesson 6: Creating a Simple Pong Game
 
-*Previous lesson: [Lesson 5 - Arrays and Sounds](lesson5.md) | Main Page: [Heathmont Game Design](/index.md) | Next lesson: [Lesson 7 - Creating a Basic State Machine](lesson7.md)*
+*Previous lesson: [Lesson 5 - Arrays and Sounds](lesson5.md) | Main Page: [Heathmont Game Design](/) | Next lesson: [Lesson 7 - Creating a Basic State Machine](lesson7.md)*
 
 Pong is one of the earliest video games and a perfect project for learning game development fundamentals. In this lesson, you'll create a complete Pong game from scratch, bringing together everything you've learned about sprites, movement, collision detection, and game logic.
 
@@ -614,4 +614,4 @@ This Pong game demonstrates fundamental game development concepts:
 
 These concepts apply to many other types of games. Experiment with modifying the game mechanics to create your own variations!
 
-*Previous lesson: [Lesson 5 - Arrays and Sounds](lesson5.md) | Main Page: [Heathmont Game Design](/index.md) | Next lesson: [Lesson 7 - Creating a Basic State Machine](lesson7.md)*
+*Previous lesson: [Lesson 5 - Arrays and Sounds](lesson5.md) | Main Page: [Heathmont Game Design](/) | Next lesson: [Lesson 7 - Creating a Basic State Machine](lesson7.md)*

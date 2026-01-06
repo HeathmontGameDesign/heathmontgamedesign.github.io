@@ -1,6 +1,6 @@
 # Lesson 7: Creating a Basic State Machine in Godot
 
-*Previous lesson: [Lesson 6 - Creating a Simple Pong Game](lesson6.md) | Main Page: [Heathmont Game Design](/index.md)*
+*Previous lesson: [Lesson 6 - Creating a Simple Pong Game](lesson6.md) | Main Page: [Heathmont Game Design](/)*
 
 State machines are one of the most useful programming patterns in game development. They help you organize complex behavior by breaking it down into distinct "states" and defining how to transition between them. In this lesson, you'll learn how to create a state machine for a player character that can be idle, walking, jumping, and attacking.
 

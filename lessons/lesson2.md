@@ -1,6 +1,6 @@
 # Lesson 2: Sprites and Movement
 
-*Previous lesson: [Lesson 1 - Draw to Screen](lesson1.md) | Main Page: [Heathmont Game Design](/index.md) | Next lesson: [Lesson 3 - Collision Detection](lesson3.md)*
+*Previous lesson: [Lesson 1 - Draw to Screen](lesson1.md) | Main Page: [Heathmont Game Design](/) | Next lesson: [Lesson 3 - Collision Detection](lesson3.md)*
 Drawings are nice and all, but a game requires interactivity and movement. In Godot, we use **Sprites** (specifically Sprite2D nodes) to represent visually the objects in our game. Sprites can represent:
 
 - a player character
@@ -78,4 +78,4 @@ Create a copy of your completed sample code and modify it so that:
 
 Save your scene as `2_ghost.tscn`
 
-*Previous lesson: [Lesson 1 - Draw to Screen](lesson1.md) | Main Page: [Heathmont Game Design](/index.md) | Next lesson: [Lesson 3 - Collision Detection](lesson3.md)*
+*Previous lesson: [Lesson 1 - Draw to Screen](lesson1.md) | Main Page: [Heathmont Game Design](/) | Next lesson: [Lesson 3 - Collision Detection](lesson3.md)*

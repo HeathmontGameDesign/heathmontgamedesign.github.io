@@ -75,14 +75,13 @@ Understand the Godot interface and learn to draw basic shapes using GDScript.
       </td>
       <td>Achieve</td>
     </tr>
-    <tr>
+    <!--tr>
       <td>5 mins</td>
-      <td>
-      <strong>Reflection</strong>: What did you learn today about Godot and drawing shapes? What was the most challenging part of the task?
-      </td>
+      <td><strong>Reflection</strong>: What did you learn today about Godot and drawing shapes? What was the most challenging part of the task? </td>
       <td> Facilitate a brief class discussion to reflect on learning outcomes
       </td>
-      <td>Reflect</td></tr></tbody></table>
+      <td>Reflect</td>
+      </tr></tbody></table-->
 
 ---
 

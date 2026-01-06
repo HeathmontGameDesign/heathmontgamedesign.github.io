@@ -1,8 +1,8 @@
-# Lesson 4 - Mouse Clicks
+# Task 4 - Mouse Clicks
 
-*Previous lesson: [Lesson 3 - Collision Detection](lesson3.md) | Main Page: [Heathmont Game Design](/) | Next lesson: [Lesson 5 - Arrays and Sounds](lesson5.md)*
+Previous task: [Task 3 - Collision Detection](lesson3.md) | Main Page: [Heathmont Game Design](/) | Next task: [Task 5 - Arrays and Sounds](lesson5.md)
 
-So far we have only used very basic keyboard input inside the `_process()` function in Godot. In this lesson, we will learn how to use the mouse to interact with our games. We will learn how to detect when the mouse is clicked, and how to use the position of the mouse to interact with sprites on the screen.
+So far we have only used very basic keyboard input inside the `_process()` function in Godot. In this task, we will learn how to use the mouse to interact with our games. We will learn how to detect when the mouse is clicked, and how to use the position of the mouse to interact with sprites on the screen.
 
 ## Reminder: The Game Loop
 
@@ -12,7 +12,7 @@ In Godot (as with lots of game development frameworks), the game loop has three 
 2. **Draw**: Godot handles drawing automatically based on your scene tree. Each visible node draws itself according to its properties.
 3. **Input**: This is where we check for player input. We can use `_input()` or `_unhandled_input()` functions to detect keyboard, mouse, and other input events.
 
-So far, we have mainly used the `_process()` function. In this lesson, we will learn how to use the `_input()` function to detect when the mouse is clicked - which represents our first dedicated use of Input events in the game loop.
+So far, we have mainly used the `_process()` function. In this task, we will learn how to use the `_input()` function to detect when the mouse is clicked - which represents our first dedicated use of Input events in the game loop.
 
 ## Mouse Input in Godot
 
@@ -157,4 +157,4 @@ Complete the TODO comments in the sample code:
 - Add a game over screen that displays the final score when the timer reaches 0. You can use a variable to keep track of whether the game is over or not. When the timer reaches 0, set this variable to true and display the game over screen. You can use a Label node or the drawing function to display the final score on the game over screen.
 - Add a restart button to the game over screen that allows the player to restart the game. You can use the `_input()` function to check for a click on the restart button (by checking the click position), and reset the game state if the button is clicked.
 
-*Previous lesson: [Lesson 3 - Collision Detection](lesson3.md) | Main Page: [Heathmont Game Design](/) | Next lesson: [Lesson 5 - Arrays and Sounds](lesson5.md)*
+Previous task: [Task 3 - Collision Detection](lesson3.md) | Main Page: [Heathmont Game Design](/) | Next task: [Task 5 - Arrays and Sounds](lesson5.md)

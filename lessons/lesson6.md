@@ -1,8 +1,8 @@
-# Lesson 6: Creating a Simple Pong Game
+# Task 6: Creating a Simple Pong Game
 
-*Previous lesson: [Lesson 5 - Arrays and Sounds](lesson5.md) | Main Page: [Heathmont Game Design](/) | Next lesson: [Lesson 7 - Creating a Basic State Machine](lesson7.md)*
+Previous task: [Task 5 - Arrays and Sounds](lesson5.md) | Main Page: [Heathmont Game Design](/) | Next task: [Task 7 - Creating a Basic State Machine](lesson7.md)
 
-Pong is one of the earliest video games and a perfect project for learning game development fundamentals. In this lesson, you'll create a complete Pong game from scratch, bringing together everything you've learned about sprites, movement, collision detection, and game logic.
+Pong is one of the earliest video games and a perfect project for learning game development fundamentals. In this task, you'll create a complete Pong game from scratch, bringing together everything you've learned about sprites, movement, collision detection, and game logic.
 
 ## What is Pong?
 
@@ -267,6 +267,7 @@ func _on_area_entered(area):
 Let's add score tracking. Attach a new script to the Game node (the root Node2D). This script will be saved as `game.gd`:
 
 ```gdscript
+
 extends Node2D
 # This is the main game controller script.
 # It manages scoring and coordinates the other game objects.
@@ -335,12 +336,14 @@ For a better user experience, let's add on-screen score display using Labels. Fi
 4. Position PlayerScoreLabel in the top-left (around x=100, y=50)
 5. Position AIScoreLabel in the top-right (around x=700, y=50)
 6. In the Inspector for both labels:
+   - Change the `Text` property to "0" (this will get replaced when run, but it helps visually)
    - Increase font size (Theme Overrides > Font Sizes > Font Size: 48)
    - Center the text alignment if desired
 
 Now update the Game script (game.gd) to update the labels. Replace the entire script with this enhanced version:
 
 ```gdscript
+
 extends Node2D
 # This is the enhanced game controller with visual score display.
 # It should replace the earlier game.gd script on the Game (Node2D) root node.
@@ -536,7 +539,7 @@ Throughout this tutorial, we've followed several Godot best practices:
 
 ## Sample Code
 
-Complete sample code for this project can be found here: [Lesson 6: Pong Game](https://github.com/HeathmontGameDesign/LearningGodot/tree/main/6_Pong_Game)
+Complete sample code for this project can be found here: [Task 6: Pong Game](https://github.com/HeathmontGameDesign/LearningGodot/tree/main/6_Pong_Game)
 
 The repository includes:
 
@@ -567,7 +570,7 @@ Add sound effects when:
 - A player scores
 - The game ends
 
-Look back at Lesson 5 for information on adding sounds to your game.
+Look back at Task 5 for information on adding sounds to your game.
 
 ### Challenge 2: Increase Difficulty
 
@@ -614,4 +617,4 @@ This Pong game demonstrates fundamental game development concepts:
 
 These concepts apply to many other types of games. Experiment with modifying the game mechanics to create your own variations!
 
-*Previous lesson: [Lesson 5 - Arrays and Sounds](lesson5.md) | Main Page: [Heathmont Game Design](/) | Next lesson: [Lesson 7 - Creating a Basic State Machine](lesson7.md)*
+Previous task: [Task 5 - Arrays and Sounds](lesson5.md) | Main Page: [Heathmont Game Design](/) | Next task: [Task 7 - Creating a Basic State Machine](lesson7.md)

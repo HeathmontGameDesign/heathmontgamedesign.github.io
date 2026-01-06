@@ -6,7 +6,7 @@ When you open a project in Godot 4.2 or higher, you'll see a powerful and compre
 
 ## Overview of the Main Areas
 
-The Godot editor is divided into several key areas, each serving a specific purpose. As you work through the lessons, you'll become familiar with these areas and learn to navigate between them efficiently.
+The Godot editor is divided into several key areas, each serving a specific purpose. As you work through the tasks, you'll become familiar with these areas and learn to navigate between them efficiently.
 
 ## 1. Main Toolbar (Top)
 
@@ -219,8 +219,9 @@ When you click on the "Script" tab at the top or double-click a .gd file, the Sc
 - **Built-in Documentation**: Press F1 or click Help → Search Help to access comprehensive documentation
 - **Tooltips**: Hover over buttons and properties to see helpful tooltips
 - **Official Documentation**: Visit [docs.godotengine.org](https://docs.godotengine.org/) for detailed guides
-- **Community**: Ask questions on the [Godot Forums](https://forum.godotengine.org/) or [Discord](https://discord.gg/godotengine)
 
 ---
 
-Now that you understand the Godot editor interface, you're ready to start creating games! Head back to the [lessons](index.md#activities) to begin learning how to use Godot effectively.
+Now that you understand the Godot editor interface, you're ready to start creating games! Head back to the [tasks](/#activities) to begin learning how to use Godot effectively.
+
+Main Page: [Heathmont Game Design](/) | First task: [Task 1 - Draw to Screen](lessons/lesson1.md) | Godot Built-in Function Reference: [godot-function-reference.md]

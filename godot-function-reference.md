@@ -1,6 +1,6 @@
 # Godot Built-in Function Reference
 
-This page provides a quick reference for commonly used built-in functions in Godot 4.2+. These functions are essential for game development and are used throughout the lessons on this site.
+This page provides a quick reference for commonly used built-in functions in Godot 4.2+. These functions are essential for game development and are used throughout the tasks on this site.
 
 ## Quick Reference Table
 
@@ -28,6 +28,7 @@ This page provides a quick reference for commonly used built-in functions in God
 **Description:** The `_ready()` function is automatically called when a node enters the scene tree for the first time. This is the perfect place to initialize variables, set starting positions, or configure your node's properties.
 
 **Usage:**
+
 ```gdscript
 extends Node2D
 
@@ -37,6 +38,7 @@ func _ready():
 ```
 
 **Key Points:**
+
 - Called only once when the node first enters the scene
 - Called after all child nodes are also ready
 - Ideal for initialization code
@@ -51,6 +53,7 @@ func _ready():
 **Description:** The `_process(delta)` function is called every frame, making it perfect for continuous game logic like movement, animations, and input checking. The `delta` parameter represents the time elapsed since the last frame in seconds.
 
 **Usage:**
+
 ```gdscript
 extends Sprite2D
 
@@ -64,9 +67,11 @@ func _process(delta):
 ```
 
 **Parameters:**
+
 - `delta` (float): Time elapsed since the last frame in seconds
 
 **Key Points:**
+
 - Called every frame (typically 60 times per second)
 - Always multiply movement by `delta` to ensure frame-rate independent movement
 - Can be disabled by setting `set_process(false)`
@@ -81,6 +86,7 @@ func _process(delta):
 **Description:** The `_draw()` function is called when a CanvasItem (like Node2D or Control) needs to be redrawn. Use this function to draw custom shapes, lines, and other visual elements directly on the screen.
 
 **Usage:**
+
 ```gdscript
 extends Node2D
 
@@ -94,6 +100,7 @@ func _draw():
 ```
 
 **Key Points:**
+
 - Called automatically when the node needs to be redrawn
 - Use `queue_redraw()` to request a redraw
 - All drawing functions must be called from within `_draw()`
@@ -108,6 +115,7 @@ func _draw():
 **Description:** Draws a filled circle on the screen at a specified position with a given radius and color. This function can only be called from within the `_draw()` function.
 
 **Usage:**
+
 ```gdscript
 extends Node2D
 
@@ -120,11 +128,13 @@ func _draw():
 ```
 
 **Parameters:**
+
 - `position` (Vector2): Center point of the circle
 - `radius` (float): Radius of the circle in pixels
 - `color` (Color): Color of the circle
 
 **Key Points:**
+
 - Must be called from within `_draw()`
 - Position is relative to the node's position
 - Use `Color()` or built-in colors like `Color.RED`
@@ -139,6 +149,7 @@ func _draw():
 **Description:** Draws a filled rectangle on the screen with a specified position, size, and color. The position represents the top-left corner of the rectangle.
 
 **Usage:**
+
 ```gdscript
 extends Node2D
 
@@ -152,11 +163,13 @@ func _draw():
 ```
 
 **Parameters:**
+
 - `rect` (Rect2): A Rect2 object defining position (x, y) and size (width, height)
 - `color` (Color): Color of the rectangle
 - `filled` (bool, optional): Whether to fill the rectangle (default: true)
 
 **Key Points:**
+
 - Must be called from within `_draw()`
 - Rect2 format: `Rect2(x, y, width, height)`
 - Position is the top-left corner, not the center
@@ -171,6 +184,7 @@ func _draw():
 **Description:** Checks if a specific input action is currently being pressed. Input actions are defined in Project Settings > Input Map and can represent keyboard keys, mouse buttons, or gamepad inputs.
 
 **Usage:**
+
 ```gdscript
 extends Sprite2D
 
@@ -185,17 +199,21 @@ func _process(delta):
 ```
 
 **Parameters:**
+
 - `action` (String): Name of the input action to check
 
 **Common Built-in Actions:**
+
 - `"ui_left"` - Left arrow key
 - `"ui_right"` - Right arrow key
 - `"ui_up"` - Up arrow key
 - `"ui_down"` - Down arrow key
 - `"ui_accept"` - Enter/Space key
 - `"ui_cancel"` - Escape key
+(Note: It is best practice to stop using these and start creating your own custom actions through Project Settings for your game.)
 
 **Key Points:**
+
 - Returns `true` while the action is held down
 - Use `Input.is_action_just_pressed()` for single press detection
 - Custom actions can be defined in Project Settings
@@ -210,6 +228,7 @@ func _process(delta):
 **Description:** Creates a 2D vector that can represent positions, directions, velocities, or any two-dimensional quantity. Vector2 is one of the most fundamental types in Godot and is used extensively for 2D game development.
 
 **Usage:**
+
 ```gdscript
 extends Sprite2D
 
@@ -226,16 +245,19 @@ func _ready():
 ```
 
 **Parameters:**
+
 - `x` (float): The x component (horizontal)
 - `y` (float): The y component (vertical)
 
 **Common Vector2 Properties:**
+
 - `vector.x` - Access the x component
 - `vector.y` - Access the y component
 - `vector.length()` - Get the length (magnitude) of the vector
 - `vector.normalized()` - Get a unit vector in the same direction
 
 **Key Points:**
+
 - Represents positions on screen (x = horizontal, y = vertical)
 - Can be added, subtracted, multiplied, and divided
 - Use for movement, directions, and velocities
@@ -250,6 +272,7 @@ func _ready():
 **Description:** Marks a node for deletion at the end of the current frame. This is the safe way to remove nodes from the scene tree without causing crashes or unexpected behavior.
 
 **Usage:**
+
 ```gdscript
 extends Area2D
 
@@ -263,6 +286,7 @@ func _on_area_entered(area):
 ```
 
 **Key Points:**
+
 - Deletion happens at the end of the current frame
 - Safer than calling `free()` directly
 - The node and all its children are removed
@@ -278,6 +302,7 @@ func _on_area_entered(area):
 **Description:** Returns a random floating-point number between the specified minimum and maximum values (inclusive). This is useful for creating randomness in games, such as random positions, speeds, or delays.
 
 **Usage:**
+
 ```gdscript
 extends Node2D
 
@@ -292,12 +317,14 @@ func _ready():
 ```
 
 **Parameters:**
+
 - `from` (float): Minimum value (inclusive)
 - `to` (float): Maximum value (inclusive)
 
 **Returns:** A random float between `from` and `to`
 
 **Key Points:**
+
 - Returns a float (decimal number)
 - Both endpoints are inclusive
 - Use for continuous ranges like positions or speeds
@@ -312,6 +339,7 @@ func _ready():
 **Description:** Returns a random integer between the specified minimum and maximum values (inclusive). This is useful for dice rolls, random choices, or any situation where you need whole numbers.
 
 **Usage:**
+
 ```gdscript
 extends Node2D
 
@@ -329,12 +357,14 @@ func _ready():
 ```
 
 **Parameters:**
+
 - `from` (int): Minimum value (inclusive)
 - `to` (int): Maximum value (inclusive)
 
 **Returns:** A random integer between `from` and `to`
 
 **Key Points:**
+
 - Returns an integer (whole number)
 - Both endpoints are inclusive
 - Available as a global function (recommended for simple use cases)
@@ -351,6 +381,7 @@ func _ready():
 **Description:** Outputs text to the console (Output tab in Godot editor). This is essential for debugging and understanding what your code is doing.
 
 **Usage:**
+
 ```gdscript
 extends Node2D
 
@@ -365,10 +396,12 @@ func _process(delta):
 ```
 
 **Parameters:**
+
 - Accepts any number of arguments of any type
 - Arguments are converted to strings and concatenated
 
 **Key Points:**
+
 - Output appears in the Output tab at the bottom of Godot editor
 - Can print multiple values separated by commas
 - Useful for debugging and tracking variable values
@@ -384,6 +417,7 @@ func _process(delta):
 **Description:** Connects a signal to a callable method. Signals are Godot's way of notifying when something happens, like a button being pressed or an area being entered.
 
 **Usage:**
+
 ```gdscript
 extends Area2D
 
@@ -402,16 +436,19 @@ func _on_body_entered(body):
 ```
 
 **Parameters:**
+
 - `signal` (Signal): The signal to connect (called on the signal itself)
 - `callable` (Callable): The function to call when the signal is emitted
 
 **Common Signals:**
+
 - `area_entered` - When an Area2D enters this area
 - `area_exited` - When an Area2D exits this area
 - `body_entered` - When a physics body enters this area
 - `pressed` - When a button is pressed
 
 **Key Points:**
+
 - Connects signals to functions for event handling
 - Functions should match the signal's parameters
 - Can disconnect with `disconnect()`
@@ -431,4 +468,4 @@ func _on_body_entered(body):
 
 ---
 
-[Back to Home](index.md)
+[Back to Home](/)

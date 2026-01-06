@@ -1,8 +1,8 @@
-# Lesson 7: Creating a Basic State Machine in Godot
+# Task 7: Creating a Basic State Machine in Godot
 
-*Previous lesson: [Lesson 6 - Creating a Simple Pong Game](lesson6.md) | Main Page: [Heathmont Game Design](/)*
+Previous task: [Task 6 - Creating a Simple Pong Game](lesson6.md) | Main Page: [Heathmont Game Design](/)
 
-State machines are one of the most useful programming patterns in game development. They help you organize complex behavior by breaking it down into distinct "states" and defining how to transition between them. In this lesson, you'll learn how to create a state machine for a player character that can be idle, walking, jumping, and attacking.
+State machines are one of the most useful programming patterns in game development. They help you organize complex behavior by breaking it down into distinct "states" and defining how to transition between them. In this task, you'll learn how to create a state machine for a player character that can be idle, walking, jumping, and attacking.
 
 ## What is a State Machine?
 
@@ -559,7 +559,7 @@ func update_visual_state():
 
 ## Sample Code
 
-Complete sample code for this project can be found here: [Lesson 7: State Machine](https://github.com/HeathmontGameDesign/LearningGodot/tree/main/7_State_Machine)
+Complete sample code for this project can be found here: [Task 7: State Machine](https://github.com/HeathmontGameDesign/LearningGodot/tree/main/7_State_Machine)
 
 The repository includes:
 
@@ -570,7 +570,7 @@ The repository includes:
 
 ## Godot Best Practices Used
 
-Throughout this lesson, we've followed several Godot best practices:
+Throughout this task, we've followed several Godot best practices:
 
 1. **Using enums for states**: Makes code self-documenting and prevents typos
 2. **Separating state logic**: Each state has its own handler function
@@ -686,4 +686,4 @@ The state machine pattern is fundamental to game programming. Understanding it w
 
 Experiment with the state machine to see how flexible and powerful this pattern can be!
 
-*Previous lesson: [Lesson 6 - Creating a Simple Pong Game](lesson6.md) | Main Page: [Heathmont Game Design](/index.md)*
+Previous task: [Task 6 - Creating a Simple Pong Game](lesson6.md) | Main Page: [Heathmont Game Design](/)

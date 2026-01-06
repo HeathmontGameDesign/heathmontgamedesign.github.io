@@ -12,20 +12,11 @@ The main development environment for Game Design is through the `Godot Engine`. 
 
 The following activities are designed to help you learn how to use Godot to create games. Each activity will introduce you to a new concept or feature of Godot and will provide you with an opportunity to practice using it.
 
-Before beginning these activities, make sure you have accessed the **[setup instructions](setup.md)** to ensure you have the necessary software installed on your laptop.
+- Before you start - get your laptop going with the **[setup instructions](setup.md)**
+- Familiarize yourself with the **[Godot Editor Interface](godot-editor-interface.md)** to understand the different areas of the editor.
+- You can use the **[Godot Built-in Function Reference](godot-function-reference.md)** as a quick reference guide while coding.
 
-Once you have Godot installed, take some time to familiarize yourself with the [Godot Editor Interface](godot-editor-interface.md). Understanding the different areas of the editor will help you navigate more efficiently as you work through the tasks.
-
-For quick reference while coding, check out the [Godot Built-in Function Reference](godot-function-reference.md) which provides detailed explanations of commonly used functions with examples and links to official documentation.
-
-Each task gives you:
-
-- A brief introduction to the concept or feature being covered
-- Sample code to demonstrate how to use the feature
-- Opportunities for you to update the sample code
-- A challenge to test your understanding of the feature
-
-## Activities
+## Tasks
 
 - [Task 1: Draw to Screen](lessons/lesson1.md)
 - [Task 2: Sprites and Movement](lessons/lesson2.md)

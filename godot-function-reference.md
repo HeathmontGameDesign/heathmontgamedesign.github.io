@@ -11,7 +11,7 @@ This page provides a quick reference for commonly used built-in functions in God
 | [`_draw()`](#_draw) | Called when a CanvasItem needs to be redrawn | [View Docs](https://docs.godotengine.org/en/stable/classes/class_canvasitem.html#class-canvasitem-method-draw) |
 | [`draw_circle()`](#draw_circle) | Draws a filled circle on the screen | [View Docs](https://docs.godotengine.org/en/stable/classes/class_canvasitem.html#class-canvasitem-method-draw-circle) |
 | [`draw_rect()`](#draw_rect) | Draws a filled rectangle on the screen | [View Docs](https://docs.godotengine.org/en/stable/classes/class_canvasitem.html#class-canvasitem-method-draw-rect) |
-| [`Input.is_action_pressed()`](#input_is_action_pressed) | Checks if an input action is currently pressed | [View Docs](https://docs.godotengine.org/en/stable/classes/class_input.html#class-input-method-is-action-pressed) |
+| [`Input.is_action_pressed()`](#inputis_action_pressed) | Checks if an input action is currently pressed | [View Docs](https://docs.godotengine.org/en/stable/classes/class_input.html#class-input-method-is-action-pressed) |
 | [`Vector2()`](#vector2) | Creates a 2D vector for positions, directions, or velocities | [View Docs](https://docs.godotengine.org/en/stable/classes/class_vector2.html) |
 | [`queue_free()`](#queue_free) | Marks a node for deletion at the end of the current frame | [View Docs](https://docs.godotengine.org/en/stable/classes/class_node.html#class-node-method-queue-free) |
 | [`randf_range()`](#randf_range) | Returns a random float within a specified range | [View Docs](https://docs.godotengine.org/en/stable/classes/class_@globalscope.html#class-globalscope-method-randf-range) |

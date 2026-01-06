@@ -10,6 +10,8 @@ The Godot editor is divided into several key areas, each serving a specific purp
 
 ## 1. Main Toolbar (Top)
 
+![Main toolbar](/assets/images/mainbar.png)
+
 The toolbar at the top of the editor provides quick access to essential functions:
 
 - **Main Menus**: File, Edit, Project, Debug, Editor, and Help menus for accessing all editor functions
@@ -19,12 +21,16 @@ The toolbar at the top of the editor provides quick access to essential function
 
 ### Workspace Tabs
 
+![Workspace Tabs](/assets/images/workspacetab.png)
+
 - **2D**: For working on 2D games, showing the 2D viewport
-- **3D**: For working on 3D games, showing the 3D viewport
+- **3D**: For working on 3D games, showing the 3D viewport (This shows up by default but can be ignored for now)
 - **Script**: For writing and editing code
 - **AssetLib**: For browsing and downloading assets from the Godot Asset Library
 
 ## 2. Viewport (Center)
+
+![Viewport](/assets/images/viewport.png)
 
 The viewport is the largest area in the center of the editor where you visualize and edit your game scenes.
 

@@ -2,6 +2,8 @@
 
 ## Lesson 1: Introduction to Godot and Drawing Basics
 
+**Double Lesson** 3/2/2026
+
 ### Learning Objective
 
 Understand the Godot interface and learn to draw basic shapes using GDScript.
@@ -16,7 +18,7 @@ Understand the Godot interface and learn to draw basic shapes using GDScript.
 
 - Godot Engine Download: [Download Godot Engine](https://godotengine.org/download)
 - Task 1 Sample Code
-- [Godot Editor Interface Guide] (godot-editor-interface.md)
+- [Godot Editor Interface Guide](godot-editor-interface.md)
 
 ### Activities
 
@@ -31,57 +33,49 @@ Understand the Godot interface and learn to draw basic shapes using GDScript.
   </thead>
   <tbody>
     <tr>
-      <td>10 mins</td>
+      <td>15 mins</td>
       <td colspan = "2">
 
-      **Heathos**: a
+      **Heathos**:
       
-      - What do we need to bring to class?
-      - How do you keep up with the work if you miss a lesson?
-      - [Game Design Website](https://heathmontgamedesign.github.io/)
+      <ul><li> What do we need to bring to class?
+      <li> How do you keep up with the work if you miss a lesson?
+      <li> <a href="https://heathmontgamedesign.github.io/">Game Design Website</a>
       </td>
       <td>Bridge</td>
     </tr>
     <tr>
-      <td>15 mins</td>
+      <td>20 mins</td>
       <td>
 
-      **Getting Started with Godot**:
-      
-      - Follow the [setup instructions](setup.md) to install Godot
-      - Create a new project and explore the Godot interface using the [Godot Editor Interface Guide](godot-editor-interface.md)
+      <strong>Setting up Godot:</strong>
+      <ul>
+      <li>Follow the <a href="https://heathmontgamedesign.github.io/setup.html">setup instructions</a> to install Godot
+      <li>Create a new project and explore the Godot interface using the <a href="https://heathmontgamedesign.github.io/godot-editor-interface.html">Godot Editor Interface Guide</a>
+      </ul>
       </td>
-      <td>
-
-      - Assist students with installation issues
-      - Guide students through the Godot interface
+      <td> Assist students with installation issues. Guide students through the Godot interface
       </td>
       <td>Bridge, Achieve</td> 
     </tr>
     <tr>
-      <td>15 mins</td>
+      <td>20 mins</td>
       <td>
-      **Drawing Shapes**:
+
+      <strong>Drawing Shapes</strong>:
       
-      - Follow the instructions in [Task 1: Draw to Screen](lessons/lesson1.md)
-      - Write a script to draw circles and rectangles on the screen
+      Follow the instructions in [Task 1: Draw to Screen](lessons/lesson1.md) .Write a script to draw circles and rectangles on the screen
 
       </td>
-      <td>
-
-      - Provide support as students work through the task
-      - Answer questions about GDScript and drawing functions
+      <td>Provide support as students work through the task. Answer questions about GDScript and drawing functions
       </td>
       <td>Discover, Achieve</td>
     </tr>
     <tr>
-      <td>10 mins</td>
+      <td>20 mins</td>
       <td>
 
-      **Challenge**:
-      
-      - Create a new Godot scene that draws a house with a roof, door, and windows.
-      - Save the scene as `1_house.tscn`
+      <strong>Challenge</strong>: Create a new Godot scene that draws a house with a roof, door, and windows. Save the scene as `1_house.tscn`
       </td>
       <td>
 
@@ -89,8 +83,21 @@ Understand the Godot interface and learn to draw basic shapes using GDScript.
       - Provide hints and tips as needed
 
       </td>
-      <td>Extend, Achieve</td>
+      <td>Achieve</td>
+    </tr>
+    <tr>
+      <td>5 mins</td>
+      <td>
+
+      **Reflection**:
+      
+      - What did you learn today about Godot and drawing shapes?
+      - What was the most challenging part of the task?
+
+      </td>
+      <td> Facilitate a brief class discussion to reflect on learning outcomes
+      </td>
+      <td>Reflect</td>
     </tr>
   </tbody>
 </table>
-

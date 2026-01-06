@@ -53,6 +53,8 @@ The toolbar above the viewport provides tools specific to the current workspace:
 
 ## 3. Scene Dock (Top-Left)
 
+![Scene Dock](/assets/images/scenedock.png)
+
 The Scene dock shows the **node hierarchy** of your current scene. In Godot, everything in your game is organized as a tree of nodes.
 
 ### Understanding the Scene Hierarchy
@@ -73,6 +75,8 @@ The Scene dock shows the **node hierarchy** of your current scene. In Godot, eve
 
 ## 4. FileSystem Dock (Bottom-Left)
 
+![FileSystem](/assets/images/filesystem.png)
+
 The FileSystem dock shows all the files and folders in your project directory.
 
 ### File Types You'll See
@@ -92,9 +96,11 @@ The FileSystem dock shows all the files and folders in your project directory.
 - **Organize**: Create folders to keep your project organized
 - **Search**: Use the search box to find files quickly
 
-**Best Practice**: Keep your project organized with folders like "scenes", "scripts", "sprites", "sounds", etc.
+**Best Practice**: Keep your project organized with folders like `scenes`, `scripts`, `sprites`, `sounds`, etc.
 
 ## 5. Inspector (Right)
+
+![Inspector](/assets/images/inspector.png)
 
 The Inspector shows all the **properties** of the currently selected node. This is where you configure how nodes behave.
 
@@ -159,6 +165,8 @@ The bottom panel contains several tabs that provide additional functionality:
 
 ## 7. Script Editor
 
+![Script Editor](/assets/images/script.png)
+
 When you click on the "Script" tab at the top or double-click a .gd file, the Script editor opens:
 
 ### Script Editor Features
@@ -203,7 +211,7 @@ When you click on the "Script" tab at the top or double-click a .gd file, the Sc
 2. Add a root node in the Scene dock
 3. Add child nodes to build your scene
 4. Configure properties in the Inspector
-5. Save the scene with Ctrl+S (Cmd+S)
+5. Save the scene with Ctrl+S (Cmd+S on Mac)
 
 ### Adding a Script to a Node
 

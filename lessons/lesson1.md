@@ -1,6 +1,7 @@
 # Task 1: Draw to Screen
 
 Main Page: [Heathmont Game Design](/) | Next task: [Task 2 - Sprites and Movement](lesson2.md)
+
 To start with Godot, you need to know how to work with the screen and draw things. The screen is where everything happens in your game. You can draw shapes, images, and text on the screen using Godot's drawing functions.
 
 ## Coordinates and Vectors in Godot

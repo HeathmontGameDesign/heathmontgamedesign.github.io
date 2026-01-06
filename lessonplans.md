@@ -53,13 +53,13 @@ Understand the Godot interface and learn to draw basic shapes using GDScript.
       </td>
       <td> Assist students with installation issues. Guide students through the Godot interface
       </td>
-      <td>Bridge, Achieve</td> 
+      <td>Bridge, Achieve</td>
     </tr>
     <tr>
       <td>20 mins</td>
       <td>
       <strong>Drawing Shapes</strong>:
-      Follow the instructions in [Task 1: Draw to Screen](lessons/lesson1.md) .Write a script to draw circles and rectangles on the screen
+      Follow the instructions in <a href="https://heathmontgamedesign.github.io/lessons/lesson1.html">Task 1: Draw to Screen</a> .Write a script to draw circles and rectangles on the screen
       </td>
       <td>Provide support as students work through the task. Answer questions about GDScript and drawing functions
       </td>
@@ -78,15 +78,14 @@ Understand the Godot interface and learn to draw basic shapes using GDScript.
     <tr>
       <td>5 mins</td>
       <td>
-      <strong>Reflection</strong>:
-      - What did you learn today about Godot and drawing shapes?
-      - What was the most challenging part of the task?
+      <strong>Reflection</strong>: What did you learn today about Godot and drawing shapes? What was the most challenging part of the task?
       </td>
       <td> Facilitate a brief class discussion to reflect on learning outcomes
       </td>
-      <td>Reflect</td>
-    </tr>
-  </tbody>
-</table>
+      <td>Reflect</td></tr></tbody></table>
+
+---
 
 ## Lesson 2: Sprites and Movement
+
+

@@ -22,7 +22,7 @@ Understand the Godot interface and learn to draw basic shapes using GDScript.
 
 ### Activities
 
-<table>
+<table class="lesson-plan-table">
   <thead>
     <tr>
       <th>Time</th>
@@ -34,7 +34,7 @@ Understand the Godot interface and learn to draw basic shapes using GDScript.
    <tbody>
     <tr>
       <td>15 mins</td>
-      <td colspan = "2">
+      <td>
       <strong>Heathos:</strong>
       <ul><li> What do we need to bring to class?
       <li> How do you keep up with the work if you miss a lesson?

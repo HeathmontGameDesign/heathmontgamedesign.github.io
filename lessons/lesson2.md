@@ -1,6 +1,7 @@
 # Task 2: Sprites and Movement
 
-*Previous task: [Task 1 - Draw to Screen](lesson1.md) | Main Page: [Heathmont Game Design](/) | Next task: [Task 3 - Collision Detection](lesson3.md)*
+Previous task: [Task 1 - Draw to Screen](lesson1.md) | Main Page: [Heathmont Game Design](/) | Next task: [Task 3 - Collision Detection](lesson3.md)
+
 Drawings are nice and all, but a game requires interactivity and movement. In Godot, we use **Sprites** (specifically Sprite2D nodes) to represent visually the objects in our game. Sprites can represent:
 
 - a player character
@@ -51,7 +52,7 @@ func _process(delta):
 
 This code checks if the left or right arrow keys are pressed, and moves the sprite left or right accordingly. It changes the `x` position of the sprite by 2 pixels each frame (subtracting to go left, adding to go right).
 
-Godot uses "input actions" which can be configured in Project Settings > Input Map. The built-in actions like `"ui_left"` and `"ui_right"` are already configured for arrow keys. When we create more complex games we would always define our own input actions.
+Godot uses "input actions" which can be configured in Project Settings > Input Map. The built-in actions like `"ui_left"` and `"ui_right"` are already configured for arrow keys. *When we create more complex games we would always define our own input actions.*
 
 ## Sample Code
 

@@ -1,5 +1,7 @@
 # Lesson Plans for Game Development Course
 
+<!-- JUST DON'T FORGET TO NOT INDENT YOUR HTML! -->
+
 ## Lesson 1: Introduction to Godot and Drawing Basics
 
 **Double Lesson** 3/2/2026
@@ -44,7 +46,7 @@ Understand the Godot interface and learn to draw basic shapes using GDScript.
 
 </td>
 <td>Bridge</td>
-<td></td></tr>
+</tr>
 <tr>
 <td>20 mins</td>
 <td markdown="1">
@@ -92,3 +94,86 @@ Encourage creativity and problem-solving. Provide hints and tips as needed
 ---
 
 ## Lesson 2: Sprites and Movement
+
+**Single Lesson** 9/2/2026
+
+### Learning Objective
+
+Learn to use sprites in Godot and implement basic movement controls.
+
+### Success Criteria
+
+- I can describe what a sprite is and how to use it in Godot
+- I can write a script to move a sprite using keyboard input
+- I can use the `_ready()` and `_process()` functions effectively
+
+### Resources
+
+- Task 2 Sample Code
+- [Godot Editor Interface Guide](https://heathmontgamedesign.github.io/godot-editor-interface.html)
+
+### Activities
+
+<table class="lesson-plan-table">
+<thead>
+<tr>
+<th>Time</th>
+<th>Students Do</th>
+<th>Teacher Does</th>
+<th>Element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10 mins</td>
+<td markdown="1">
+
+**Recap of Lesson 1:**
+
+On your mini-whiteboard:
+
+- Identify the co-ordinates from a given position on the screen
+- In your own words: how could you make an object move across the screen?
+
+</td>
+<td> Set the questions and give feedback</td>
+<td>Bridge</td>
+</tr>
+<tr>
+<td>10 mins</td>
+<td> Listen and follow along. </td>
+<td markdown="1">
+
+**Introduction to Sprites:**
+
+- What is a sprite?
+- How do we create a sprite in Godot?
+- Using the node hierarchy to add a Sprite2D node
+- Moving a sprite using the `position` property
+
+</td>
+<td>Bridge, Discover</td>
+</tr>
+<tr>
+<td>20 mins</td>
+<td markdown="1">
+
+**Creating a Sprite and Movement Script:**
+
+Follow the instructions in [Task 2: Sprites and Movement](https://heathmontgamedesign.github.io/lessons/lesson2.html) to create a sprite and write a script to move it using keyboard input
+
+</td>
+<td> Provide support as students work through the task. Answer questions about GDScript and movement functions </td>
+<td>Achieve</td>
+</tr>
+<tr>
+<td>10 mins</td>
+<td markdown="1" colspan="2">
+
+**Review:** Exit Ticket (on a mini-whiteboard) - Why use a _sprite_ instead of drawing shapes directly?
+
+</td>
+<td>Reflect</td>
+</tr>
+</tbody>
+</table>

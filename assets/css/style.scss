@@ -4,5 +4,15 @@
 @import "{{ site.theme }}";
 
 * {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+}
+
+.lesson-plan-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-weight: bold;
 }

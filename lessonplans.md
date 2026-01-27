@@ -21,6 +21,7 @@ Understand the Godot interface and learn to draw basic shapes using GDScript.
 - Godot Engine Download: [Download Godot Engine](https://godotengine.org/download)
 - Task 1 Sample Code
 - [Godot Editor Interface Guide](godot-editor-interface.md)
+- [Sample Code File for Task 1](https://heathmontgamedesign.github.io/assets/tasks/Task1.zip)
 
 ### Activities
 
@@ -170,7 +171,9 @@ Follow the instructions in [Task 2: Sprites and Movement](https://heathmontgamed
 <td>10 mins</td>
 <td markdown="1" colspan="2">
 
-**Review:** Exit Ticket (on a mini-whiteboard) - Why use a _sprite_ instead of drawing shapes directly?
+**Review:** Exit Ticket (on a mini-whiteboard)
+
+- Why use a _sprite_ instead of drawing shapes directly?
 
 </td>
 <td>Reflect</td>

@@ -63,11 +63,11 @@ This code draws a rectangle. The parameters are:
 
 You now have all the information you need to play around with drawing in Godot. To get started:
 
-- Download the sample code here: [Task 1: Draw to Screen](https://github.com/HeathmontGameDesign/LearningGodot/blob/main/1_Draw_to_screen/1_sample.gd)
-- Create a new Scene in Godot with a Node2D as the root node
-- Attach a new script to the Node2D and replace it with the sample code
-- Run the scene to see what it does
-- Following the comments in the code, add your own code to draw different shapes on the screen
+- Download the sample code here: [Task 1: Draw to Screen](https://heathmontgamedesign.github.io/assets/tasks/Task1.zip)
+- Import the project into Godot
+- Click on the Script icon (attached to the "Task1" node) to open the script editor
+- Run the project to see the shapes drawn on the screen
+- Experiment with changing the positions, sizes, and colors of the shapes in the `_draw()` function
 
 ## Challenge
 

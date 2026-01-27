@@ -26,6 +26,8 @@ The following activities are designed to help you learn how to use Godot to crea
 
 The main development environment for Game Design is through the `Godot Engine`. Godot is a free and open-source game engine that uses its own scripting language called `GDScript`, which is similar to Python. Godot makes it easy to create 2D and 3D games with a visual editor and powerful scripting capabilities.
 
+Godot can be downloaded from the official website: [https://godotengine.org/download](https://godotengine.org/download), or the web version can be used at [https://engine.godotengine.org/](https://engine.godotengine.org/).
+
 ## Getting Additional Help
 
 - **Built-in Documentation**: Press F1 or click Help → Search Help to access the documentation
